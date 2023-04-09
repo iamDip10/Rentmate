@@ -1,0 +1,159 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/register.css' %}">
+    <title>Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <div class="container">
+            <div class="headd">
+                <img src="{% static 'IMG/white.png' %}" alt="Logo">
+                <p>It seems you are new here! Welcome to <span>Rentmate</span>. You need to follow just two steps to get register and avail our services.</p>
+            </div>
+            <h3>Start your <span>journey!</span> </h3>
+            <p class="con">Please provide your personal informations below</p>
+            <div class="page">
+                <form action="/register/" method="POST">
+                {% csrf_token %}
+                    <div class="f_page" id="_page">
+                        <p>You are joining as a:</p>
+                        <div class="q1">
+                            <input type="radio" id="res" name="typ" value="Residant">
+                            <label for="res">Residant</label>
+                            <input type="radio" id="land" name="typ" value="Property owner">
+                            <label for="land">Property owner</label>
+                        </div>
+                        <div class="q2">
+                            <input type="text" name="fname" id="fn" placeholder="First name" class="cfn" required>
+                            <label for="fn" class="cq1">First name</label>
+                        </div>
+                        <div class="q3">
+                            <input type="text" name="lname" id="ln" placeholder="Last name" class="cln" required>
+                            <label for="ln" class="cq2">Last name</label>
+                        </div>
+                        <p class="gen">Select gender:</p>
+                        <div class="q8">
+                            <input type="radio" id="male" name="gender" value="Male">
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="Female">
+                            <label for="female">Female</label>
+                        </div>
+                        <div class="q4">
+                            <input type="text" name="phn" id="pn" placeholder="Enter your phone number" class="cpn" required>
+                            <label for="pn" class="cq3">Enter your phone number</label>
+                        </div>
+                        <div class="q5">
+                            <input type="text" name="mail" id="el" placeholder="Email address" class="cel">
+                            <label for="el" class="cq4">Email address (Optional)</label>
+                        </div>
+                        <div class="q6">
+                            <input type="password" name="pass" id="ps" class="cps" placeholder="Enter password">
+                            <label for="ps" class="cq5">Enter password</label>
+                        </div>
+                        <div class="q7">
+                            <input type="password" name="cpass" id="_ps" class="ccps" placeholder="Confirm password">
+                            <label for="_ps" class="cq6">Confirm password</label>
+                        </div>
+                        <div class="btn" id="_btn" onclick="nextpage()">
+                            <button class="input">Next</button>
+                        </div>
+                    </div>
+                    <div class="s_page" id="_page2">
+                        <div class="q9">
+                            <input type="text" name="paddrs" id="pa" placeholder="Enter present address" class="cpad" required>
+                            <label for="pa" class="cq7">Enter present address</label>
+                        </div>
+                        <div class="q10">
+                            <div class="select" tabindex="1">
+                                <input class="selectopt" name="test" type="radio" id="opt0" checked>
+                                <label for="opt0" class="option">Select your division</label>
+                                <input class="selectopt" name="test" value="Orange" type="radio" id="opt1">
+                                <label for="opt1" class="option">Oranges</label>
+                                <input class="selectopt" name="test" value="Apples" type="radio" id="opt2">
+                                <label for="opt2" class="option">Apples</label>
+                                <input class="selectopt" name="test" value="Grapefruit" type="radio" id="opt3">
+                                <label for="opt3" class="option">Grapefruit</label>
+                                <input class="selectopt" name="test" value="Banana" type="radio" id="opt4">
+                                <label for="opt4" class="option">Bananas</label>
+                                <input class="selectopt" name="test" value="Watermelon" type="radio" id="opt5">
+                                <label for="opt5" class="option">Watermelon</label>
+                            </div>
+                            <div class="select_a" tabindex="1">
+                                <input class="selectopt_" name="test_" type="radio" id="opt0" checked>
+                                <label for="opt0" class="option_">Select your area</label>
+                                <input class="selectopt_" name="test_" type="radio" id="opt1">
+                                <label for="opt1" class="option_">Oranges</label>
+                                <input class="selectopt_" name="test_" type="radio" id="opt2">
+                                <label for="opt2" class="option_">Apples</label>
+                                <input class="selectopt_" name="test_" type="radio" id="opt3">
+                                <label for="opt3" class="option_">Grapefruit</label>
+                                <input class="selectopt_" name="test_" type="radio" id="opt4">
+                                <label for="opt4" class="option_">Bananas</label>
+                                <input class="selectopt_" name="test_" type="radio" id="opt5">
+                                <label for="opt5" class="option_">Watermelon</label>
+                            </div>
+                        </div>
+                        
+                        <div class="q11">
+                            <input type="text" name="NID" id="nid" placeholder="Enter NID number" class="nidn" required>
+                            <label for="nid" class="cq8">Enter NID number</label>
+                        </div>
+
+                        <div class="q12" id="_hi">
+                            <input type="text" name="houseid" id="hi" placeholder="Enter house ID" class="hid" required>
+                            <label for="hi" class="cq9">Enter house ID</label>
+                        </div>
+                        <div class="back">
+                            <button class="backk" onclick="back()">Back</button>
+                        </div>
+                    </div>
+                    <div class="submt" id="_sub">
+                        <input type="submit" name="submt" id="__sub" onclick="sub()" value="Submit">
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        <script>
+            var page = document.getElementById("_page") ;
+            var page2 = document.getElementById("_page2") ; 
+            var btn = document.getElementById("_sub") ;
+            var eel = document.getElementsByName("typ") ;
+
+            page.style.display = "block" ;
+            page2.style.display = "none" ;
+            btn.style.display = "none" ;
+            
+            function nextpage() {
+                page.style.display = "none" ;
+                page2.style.display = "block" ;
+                btn.style.display = "block" ;
+                if (eel[0].checked) {
+                    document.getElementById("hi").setAttribute("disabled", true) ;
+                    document.getElementById("_hi").style.opacity = 0.5 ;
+                }else {
+                    document.getElementById("hi").removeAttribute("disabled");
+                    document.getElementById("_hi").style.opacity = 1 ;
+                }
+            }
+            function back() {
+                page2.style.display = "none" ;
+                page.style.display = "block";
+                btn.style.display = "none" ;
+            }
+
+            function sub() {
+                console.log("Hi")
+            }
+
+
+        </script>
+</body>
+</html>

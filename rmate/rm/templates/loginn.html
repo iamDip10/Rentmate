@@ -1,0 +1,175 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/x-icon" href="/IMAGES/fevicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Noto+Sans:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+
+  <title>Rentmate | Login</title>
+
+</head>
+<style>
+  *::-webkit-scrollbar {
+    display: none;
+  }
+
+  input:focus {
+    outline: none;
+    transition: 0.6s;
+  }
+
+  textarea:focus {
+    outline: none;
+    transition: 0.6s;
+  }
+</style>
+
+
+
+
+<style>
+  .form {
+    width: 80%;
+    position: relative;
+    height: 60px;
+    overflow: hidden;
+    font-size: 14px;
+  }
+
+  .form input {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    padding-top: 20px;
+    border: none;
+    background-color: transparent;
+  }
+
+  .form label {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid white;
+  }
+
+  .form label::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #ffffff;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+  }
+
+  .content-name {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+    color: white;
+  }
+
+  .form input:focus {
+    outline: none;
+  }
+
+  .form input:focus+.label-name .content-name,
+  .form input:valid+.label-name .content-name {
+    transform: translateY(-100%);
+    font-size: 10px;
+    left: 0px;
+    color: #ffffff;
+  }
+
+  .form input:focus+.label-name::after,
+  .form input:valid+.label-name::after {
+    transform: translateX(0%);
+  }
+
+</style>
+
+
+<body>
+  <div class="contain">
+    <div class="vdo">
+      
+  
+          <video class="v" loop="loop" muted="muted" autoplay="autoplay">
+            <source class="blurred-img" src="{% static 'VIDEOS/LOGINVID1.mp4' %}" />
+          </video>
+
+    </div>
+
+    <div class="login">
+        <div class="greetings">
+          <h2>Welcome!</h2>
+          <p class="li">Login with your phone number and password!</p>
+        </div>
+        
+        <form action="{% url 'login' %}" method="post">
+          {% csrf_token %}
+          <div class="q1">
+            <input type="radio" id="res" name="typp" value="Residant">
+            <label for="res">Residant</label>
+            <input type="radio" id="land" name="typp" value="Property owner">
+            <label for="land">Property owner</label>
+          </div>
+          <div class="phn">
+            <input class="phn_num" name="__phn" maxlength="11" id="name" required>
+            <label for="name" class="label">Enter phone number</label>
+          </div>
+          <div class="pass">
+            <input class="pass_w" name="__pass" type="password" id="passw" required>
+            <label for="passw" class="plabel">Enter password</label>
+          </div>
+
+          <div class="sub">
+            <input type="submit" name="submit" id="_sub" value="Login">
+          </div>
+
+
+        </form>
+        <div class="reg"> 
+          <h3 style="margin-top:10px;">New to rentmate? <a href="{% url 'register'%}" style="font-size:1.2rem; color: black; font-weight: bold;">Register</a></h3>
+        </div>
+
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

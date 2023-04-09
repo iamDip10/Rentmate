@@ -1,0 +1,266 @@
+{% load static %}
+{% load tailwind_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% tailwind_css %}
+    <link rel="icon" type="image/x-icon" href="{% static 'IMG/fevicon.png' %}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Noto+Sans:wght@500&display=swap" rel="stylesheet">
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+<link rel="stylesheet" href="{% static 'CSS/parallax.css' %}">
+
+
+   
+<title>Rentmate | Home</title>
+
+</head>
+
+<body class="scroll-smooth " >
+
+
+        <div class="fixed -top-0 w-screen py-7">
+            <nav class="flex justify-evenly rounded-3xl py-2 bg-[#2C2C2C] bg-clip-padding bg-opacity-50 
+            scale-90 relative h-14">
+                <a href=""><img src= "{% static 'IMG/team logo white.png' %}" alt="RENTMATE" class="ml-5 bg-fixed w-40 h-12"></a>
+                <ul class="flex ml-12 text-white">
+                        <a href="/"><li class=" mt-2 text-xm">Site</li></a>
+                        <a href="#home"><li class="pl-5 mt-2 text-xm">Home</li></a>
+                        <a href=""><li class="pl-5 mt-2 text-xm">Curiousity</li></a>
+                        <a href=""><li class="pl-5 mt-2 text-xm">Central Processing Unit</li></a>
+                </ul>
+            </nav>
+        </div>
+
+
+
+        <div class="hero-wrapper">
+            <div class="hero">
+                <figure>
+                    <video loop="loop" muted="muted" autoplay="autoplay">
+                        <source class="blurred-img" src="{% static 'VIDEOS/encCopOnly.mp4' %}" />
+                    </video>
+
+                </figure>
+            </div>
+        </div>
+        <div class="flex justify-center p-80 ">
+            <h1 style="font-family: 'Josefin Sans', sans-serif;" class="text-4xl animate-pulse duration-75">Scroll Down</h1>
+        </div>
+        <div class="" style="margin-top: -600px;">
+            <div class="stretch  px-32" id="home" style="height: 1000px;">
+            <h1  class=" reveal flex  w-fit  justify-start text-5xl" style="font-family: 'Josefin Sans', sans-serif;
+            ">Team Encrypted Cops</h1>
+             <div class="reveal flex justify-end pt-32 border-t-2 border-stone-500" >
+                <p class="w-2/3 flex text-right" style="font-size: 1.1rem;">Welcome to our team page! We are a group of dedicated professionals who are passionate about what we do. Our team is made up of experts in various fields, including design, development, and marketing. Our goal is to provide the best possible service to our clients and help them achieve their business objectives. We take pride in our work and strive to exceed expectations. We believe that a strong team is the key to success, and we work closely together to ensure that each project is completed to the highest standard. We are constantly learning and growing, and we bring a wealth of experience and knowledge to every project we work on. Thank you for taking the time to learn more about our team. We would be honored to work with you and help you achieve your goals.</p>
+             </div>
+           
+            </div>
+        </div>
+
+        <div class="px-32" id="home" style="height: 1000px; margin-top: -400px;" >
+            <div class=" reveal flex justify-end">
+                <h1  class="  w-fit  text-right text-5xl" style="font-family: 'Josefin Sans', sans-serif;
+                ">Developers</h1>
+            </div>
+
+             <div class="reveal flex justify-end pt-10 border-t-2 border-stone-500" >
+                <p class=" flex text-right ">Meet Our Gems</p>
+             </div>
+
+             <!-- Photo Sider -->
+             <div class="bg-[#131313] flex w-fit reveal">
+                <div class="container-all ">
+                    <div class="container ">
+                      <img id="img" src="{% static 'IMG/DIPSAHA.png' %}" alt="">
+
+                       <span class="title">Dip Saha</span>
+                      <span class="text">Founder & CEO, <br> Senior Web Developer</span>
+                    </div>
+                    <div class="container">
+                      <img id="img" src="{% static 'IMG/DARAINKHAN.png' %}" alt="">
+                      <span class="title">Mohammad Darain Khan</span>
+                      <span class="text">Founder & CEO, <br> Senior Web Developer
+                      </span>
+                    </div>
+                   
+
+                    </div>
+             </div>
+
+
+<style>
+.container-all{
+  width: fit-content;
+
+  height: auto;
+}
+.container{
+  width: calc(50% - 6px);
+  overflow:hidden;
+  height: fit-content;
+  margin:3px;
+  padding: 0;
+  display:block;
+  position:relative;
+  float:left;
+}
+#img{
+  width: 100%;
+  transition-duration: .3s;
+  max-width: 100%;
+  display:block;
+  overflow:hidden;
+  cursor:pointer;
+}
+.title{
+  position:absolute;
+  display:block;
+  cursor:pointer;
+  top: 85%;
+  display: none;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 1.6em;
+  text-shadow: 1px 5px 10px black;
+  transition-duration: .3s;
+}
+.text{
+  position:absolute;
+  top: 94%;
+  cursor:pointer;
+  max-width: 80%;
+  text-align:center;
+  left: 50%;
+  text-shadow: 1px 5px 10px black;
+  font-size: 1em;
+  display:none;
+  margin-right: -50%;
+  transition-duration: .3s;
+  transform: translate(-50%, -50%) 
+}
+.container img{
+
+  filter: grayscale(100%);
+
+}
+.container:hover img{
+  transform: scale(1.2);
+  transition-duration: .3s;
+  filter: grayscale(0%);
+  opacity: .7;
+}
+.container:hover span{
+  color:white;
+  display: block;
+  transition-duration: .3s;
+}
+@media only screen and (max-width: 900px) {
+    .container {
+        width: calc(50% - 6px);
+    }
+}
+@media only screen and (max-width: 400px) {
+    .container {
+        width: 100%;
+    }
+}
+                </style>
+
+             <!-- Photo Slider -->
+            </div>
+
+
+
+        <footer class="bg-[#131313] grid px-20 pt-20 pb-20 ">
+            <div class="flex justify-center scale-75">
+                <div class="flex border-r-2 pr-72 border-stone-500">
+                    <img src= "{%static 'IMG/white.png' %}" alt="" srcset="" class="w-60 h-44 absolute">
+                </div>
+                <div class="grid px-20 pr-72 border-stone-500 border-r-2">
+        
+                    <h1 class="text-white text-2xl opacity-90">Contact With Us</h1>
+                    <h1 class="text-white text-lgmd opacity-90">Address:</h1>
+                    <p class="text-white text-md opacity-70">United City, Madani Avenue, <br>
+                        Badda, Dhaka - 1212, Bangladesh.</p><br>
+        
+                        <h1 class="text-white text-xl opacity-90">Call:</h1>
+                    <p class="text-white text-md opacity-70">+8801712950127, <br>
+                        +8801810046480</p><br>
+        
+                        <h1 class="text-white text-xl opacity-90">Email:</h1>
+                        <p class="text-white text-md opacity-70">mkhan203010@gmail.com <br>
+                            </p>
+        
+        
+                </div>
+    
+                <div class="grid px-10 ">
+                    <h1 class="text-white text-xl pl-5 opacity-90">Find Us on Social Platforms</h1>
+                    <div class="flex mb-1000 absolute">
+                        <a href="https://www.facebook.com/mdk.fahim/" class="pl-5 mt-14"><img src="{% static 'IMG/facebook.png' %}" alt=""></a>
+                        <a href="https://www.facebook.com/iamDip" class="pl-5 mt-14"><img src="{% static 'IMG/facebook.png' %}" alt=""></a>
+                    </div>
+                </div>
+    
+            </div >
+            
+            <div class="grid justify-center relative top-12">
+                <img src="{% static 'IMG/team logo white.png' %}" alt="" srcset="" class="w-60">
+                <p class="text-white opacity-60">All Right Reserved Team Encrypted Cops</p>
+            </div>
+    
+        </footer>
+        <script type="text/javascript">
+            window.addEventListener('scroll', reveal);
+            function reveal(){
+                var reveals = document.querySelectorAll('.reveal');
+                for(var i = 0; i< reveals.length; i++){
+
+                    var windowheight = window.innerHeight;
+                    var revealtop = reveals[i].getBoundingClientRect().top;
+                    var revealpoint = 150;
+
+                    if(revealtop < windowheight - revealpoint){
+                        reveals[i].classList.add('active');
+                    }
+                    else{
+                        reveals[i].classList.remove('active');
+                    }
+    
+                }
+            }
+
+        </script>
+</body>
+
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

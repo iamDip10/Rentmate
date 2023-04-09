@@ -1,0 +1,319 @@
+{% load static %}
+{% load tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="{% static 'IMG/fevicon.png' %}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'CSS/lstyle.css' %}">
+    {% tailwind_css %}
+
+    <title>Rentmate | Home</title>
+
+</head>
+<body class="grid scroll-smooth ">
+    <section class="flex">
+        <div class="fixed w-full align-middle z-10">
+            <header class="flex justify-between px-10 py-5 bg-[#2C2C2C] bg-clip-padding bg-opacity-50 ">
+                <a href=""><img src="{% static 'IMG/NavPng.png' %}" alt="RENTMATE" class=""></a>
+                <ul class="flex mx-10 text-white">
+                        <a href="{% url 'landing' %}"><li class="ml-16 mt-5 ">Home</li></a>
+                        <a href="/aboutus/"><li class="ml-16 mt-5 ">About Us</li></a>
+                        <a href=""><li class="ml-16 mt-5 ">Terms & Conditions</li></a>
+                        <a href="{%url 'login'%}"><li class="ml-16 mt-5 ">Login</li></a>
+                </ul>
+            </header>
+        </div>
+
+
+    </section>
+    <section id="bgVid" class="" style="font-family: 'Playfair Display', serif;">
+        <video autoplay loop muted class="h-full w-full">
+            <source src="{% static 'VIDEOS/new.mp4' %}" type="">
+        </video>
+        <div class="grid absolute bottom-1/2 left-1/3 -translate-x-20 translate-y-32 ">
+            <h1 class="flex justify-center font-extrabold text-6xl  relative right-10 text-white">FINDING HOME IN RENT?</h1>
+
+
+            <form action="" class="grid justify-center mt-16 bg-white bg-opacity-40 pt-5 pb-5 pl-5 pr-5 relative -left-9 rounded-3xl">
+
+                <div class="flex flex-warp" style="font-family: 'Noto Sans', sans-serif;">
+                    <select name="District" class="  w-72 pl-4 border-slate-900 rounded-xl py-2 scale-90 ease-out duration-700">
+                        <option value="No-Value">Select Price Range</option>
+                        <option value="threeToFiveK">BDT 3000-5000</option>
+                        <option value="No-Value">BDT 5000-10000</option>
+                        <option value="No-Value">BDT 10000-15000</option>
+                        <option value="No-Value">BDT 15000+</option>
+                        
+                    </select><br><br>
+                    <input type="text" name="" id="" class="  w-72 pl-4 border-slate-900 rounded-xl py-2 scale-90 ease-out duration-700" placeholder="Enter Location"><br>
+    
+                    <select name="District"  class="w-72 pl-4 border-slate-900 rounded-xl py-2 scale-90 ease-out duration-700 ">
+                        <option value="No-Value">Select District</option>
+                        <option value="Bandarban">Bandarban</option>
+                        <option value="Bagerhat">Bagerhat</option>
+                        <option value="Barguna">Barguna</option>
+                        <option value="Barisal">Barisal</option>
+                        <option value="Bhola">Bhola</option>
+                        <option value="Bogra">Bogra</option>
+                        <option value="Brahmanbaria">Brahmanbaria</option>
+                        <option value="Chandpur">Chandpur</option>
+                        <option value="Chittagong">Chittagong</option>
+                        <option value="Chuadanga">Chuadanga</option>
+                        <option value="Comilla">Comilla</option>
+                        <option value="Cox'sBazar">Cox'sBazar</option>
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Dinajpur">Dinajpur</option>
+                        <option value="Faridpur">Faridpur</option>
+                        <option value="Feni">Feni</option>
+                        <option value="Gaibandha">Gaibandha</option>
+                        <option value="Gazipur">Gazipur</option>
+                        <option value="Gopalganj">Gopalganj</option>
+                        <option value="Habiganj">Habiganj</option>
+                        <option value="Jaipurhat">Jaipurhat</option>
+                        <option value="Jamalpur">Jamalpur</option>
+                        <option value="Jessore">Jessore</option>
+                        <option value="Jhalokati">Jhalokati</option>
+                        <option value="Jhenaidah">Jhenaidah</option>
+                        <option value="Khagrachari">Khagrachari</option>
+                        <option value="Khulna">Khulna</option>
+                        <option value="Kishoreganj">Kishoreganj</option>
+                        <option value="Kurigram">Kurigram</option>
+                        <option value="Kushtia">Kushtia</option>
+                        <option value="Lakshmipur">Lakshmipur</option>
+                        <option value="Lalmonirhat">Lalmonirhat</option>
+                        <option value="Madaripur">Madaripur</option>
+                        <option value="Magura">Magura</option>
+                        <option value="Manikganj">Manikganj</option>
+                        <option value="Maulvibazar">Maulvibazar</option>
+                        <option value="Meherpur">Meherpur</option>
+                        <option value="Munshiganj">Munshiganj</option>
+                        <option value="Mymensingh">Mymensingh</option>
+                        <option value="Naogaon">Naogaon</option>
+                        <option value="Narail">Narail</option>
+                        <option value="Narayanganj">Narayanganj</option>
+                        <option value="Narsingdi">Narsingdi</option>
+                        <option value="Natore">Natore</option>
+                        <option value="Nawabganj">Nawabganj</option>
+                        <option value="Netrokona">Netrokona</option>
+                        <option value="Nilphamari">Nilphamari</option>
+                        <option value="Noakhali">Noakhali</option>
+                        <option value="Pabna">Pabna</option>
+                        <option value="Panchagarh">Panchagarh</option>
+                        <option value="Patuakhali">Patuakhali</option>
+                        <option value="Pirojpur">Pirojpur</option>
+                        <option value="Rajbari">Rajbari</option>
+                        <option value="Rajshahi">Rajshahi</option>
+                        <option value="Rangamati">Rangamati</option>
+                        <option value="Rangpur">Rangpur</option>
+                        <option value="Satkhira">Satkhira</option>
+                        <option value="Shariatpur">Shariatpur</option>
+                        <option value="Sherpur">Sherpur</option>
+                        <option value="Sirajganj">Sirajganj</option>
+                        <option value="Sunamganj">Sunamganj</option>
+                        <option value="Sylhet">Sylhet</option>
+                        <option value="Tangail">Tangail</option>
+                        <option value="Thakurgaon">Thakurgaon</option>
+                    </select><br><br>
+    
+                </div>
+                
+                <input type="submit" value="Search" class="bg-gray-800  text-white w-44 h-12 mt-5 relative left-80 hover:rounded-xl hover:scale-110 transition-all ">
+            </form>
+        </div>
+    </section>
+    <section class=" grid mx-5  scale-75 ">
+        <div class="grid justify-end pb-10 border-r-2 border-stone-800">
+            <h1 style="font-family: 'Playfair Display', serif; " class="text-6xl font-extrabold tracking-wide text-right pb-2 px-12 pt-3">How Rentmate Works</h1>
+            <p  class="text-2xl tracking-wide text-right pb-5 px-12 pt-3">Hover The photos to See the Facilities</p>
+        </div><br>
+
+        <div class="px-12 border-l-2 border-stone-800 ">
+            <div class="gallery  ">
+                <div class="gallery__column">
+                    <h1 class="text-xl">Searching & Finding House</h1>
+                    <label href="" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="{% static 'IMG/appert.jpg'%}" alt="Portrait by Jessica Felicio" class="gallery__image">
+                            <figcaption class="gallery__caption">Choose Your choiced Appartment</figcaption>
+                        </figure>
+                    </label>
+                    <label href="" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="{% static 'IMG/home.jpg' %}" alt="Portrait by Jessica Felicio" class="gallery__image">
+                            <figcaption class="gallery__caption">See Appertment's Facilities</figcaption>
+                        </figure>
+                    </label>
+            
+            
+                </div>
+                
+                <div class="gallery__column">
+                    <h1 class="text-xl">What's the Environment Outside?</h1>
+            
+                    <label class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="{% static 'IMG/mosque and temple.jpg' %}" alt="Portrait by Sam Burriss" class="gallery__image">
+                            <figcaption class="gallery__caption">See the Worship Facilities From the Appertment</figcaption>
+                        </figure>
+                    </label>
+                    <label class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="{% static 'IMG/hos.jpg' %} " alt="Portrait by Sam Burriss" class="gallery__image">
+                            <figcaption class="gallery__caption">See the Nearby Hospitals</figcaption>
+                        </figure>
+                    </label>
+                </div>
+                
+                <div class="gallery__column">
+                    <h1 class="text-xl">Benifits as House Owner</h1>
+            
+                    <label href="https://unsplash.com/@mr_geshani" target="_blank" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="{% static 'IMG/acc1.jpg' %}" alt="Portrait by Amir Geshani" class="gallery__image">
+                            <figcaption class="gallery__caption">Keep a Monthly Track </figcaption>
+                        </figure>
+                    </label>
+            
+                    <label href="https://unsplash.com/@mr_geshani" target="_blank" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="{% static 'IMG/marissa-grootes-H0YxjMzc6ZQ-unsplash.jpg' %}" alt="Portrait by Amir Geshani" class="gallery__image">
+                            <figcaption class="gallery__caption">See All Transactions</figcaption>
+                        </figure>
+                    </label>
+            
+                    <label href="https://unsplash.com/@mr_geshani" target="_blank" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="{% static 'IMG/paint.jpg' %}" alt="Portrait by Amir Geshani" class="gallery__image">
+                            <figcaption class="gallery__caption">t House Upgrade Suggestions</figcaption>
+                        </figure>
+                    </label>
+                    
+                </div>
+                
+                <div class="gallery__column">
+                    <h1 class="text-xl">Benifits as Renter</h1>
+                    <label  class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="{% static 'IMG/rating.jpg' %}" alt="Portrait by Dima DallAcqua" class="gallery__image">
+                            <figcaption class="gallery__caption">Rate your house owner</figcaption>
+                        </figure>
+                    </label>
+            
+                    <label  class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="{% static 'IMG/taka.jpg' %}" alt="Portrait by Dima DallAcqua" class="gallery__image">
+                            <figcaption class="gallery__caption">Pay your Rent Online </figcaption>
+                        </figure>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+<!-- IMAGE ENDs -->
+    <section class="flex  flex-warp justify-center text-white px-20 pb-44 mt-44 bg-[#2C2C2C] w-fit ">
+        <div class="mt-24  border-gray-600 pl-5 pb-5 w-1/2">
+            <div class="mx-16">
+                <h1 style="font-family: 'Playfair Display', serif; " class="text-4xl tracking-wide text-center pb-5" >Goals</h1>
+                <p class="text-center text-sm"> Our goal at Rentmate is to be the go-to destination for rental housing. We aim to provide renters with a comprehensive and user-friendly platform to find their perfect home and landlords a efficient way to manage and list their rentals. We strive to make the rental process as seamless and efficient as possible, through providing value-added services and creating a positive rental experience for all parties.</p>
+            </div>
+        </div>
+
+
+        <div class="mt-24  border-gray-600 pl-5 pb-5 w-1/2">
+            <div class="mx-16">
+                <h1 style="font-family: 'Playfair Display', serif; " class="text-4xl tracking-wide text-center pb-5" >Visions</h1>
+                <p class="text-center text-sm"> Our vision is to revolutionize the rental industry by providing an efficient platform connecting renters with suitable properties and offering innovative solutions for all parties. To be the leader in rental housing, by providing unparalleled service and positive rental experience.</p>
+            </div>
+        </div>
+
+        <div class="mt-24  border-gray-600 pl-5 pb-5 w-1/2">
+            <div class="mx-16">
+                <h1 style="font-family: 'Playfair Display', serif; " class="text-4xl tracking-wide text-center pb-5" >Objectives</h1>
+                <p class="text-center text-sm"> The objectives of Rentmate is Providing a user-friendly platform for renters to search and apply for properties
+                    Simplifying the rental process for landlords by offering efficient property management tools
+                    Providing added value services such as credit check and background check for landlords and renters
+                    Implementing online rent payment and maintenance request systems</p>
+            </div>
+        </div>
+        
+        
+    </section>
+    <!-- <section class="grid justify-end bg-[#2C2C2C] text-white  ">
+        <div>
+            <div class="grid justify-end mr-10 pr-10 mt-24 relative right-20 border-r-4  border-gray-600 pl-5">
+            <h1 style="font-family: 'Playfair Display', serif;" class="text-7xl tracking-wide justify-end flex  ">Developers </h1>
+            <p class="pt-10 pb-5 flex justify-end">
+                Meet Our Developers
+            </p>
+
+            <div class="flex mt-5 justify-end">
+                <div class="grid justify-start">
+                    <img src='IMAGES/darain.png' alt="Mohammad Darain Khan" class="rounded-2xl">
+                    <p class="pt-2 flex justify-end text-xl">Mohammad Darain Khan Fahim </p>
+                    <p class=" flex justify-end text-lg">Senior Web Developer, Team Encrypted Cops</p><br>
+                </div>
+
+                <div class="grid mx-16">
+                    <img src='IMAGES/dip.png' alt="Mohammad Darain Khan" class="rounded-2xl">
+                    <p class="pt-2 flex justify-end text-xl">Dip Saha </p>
+                    <p class=" flex justify-end text-lg">Senior Web Developer, Team Encrypted Cops</p><br>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+
+    </section> -->
+    <footer class="bg-[#131313] grid px-20 pt-20 pb-20 ">
+        <div class="flex justify-center scale-75">
+            <div class="flex border-r-2 pr-72 border-stone-500">
+                <img src="{% static 'IMG/white.png' %}" alt="" srcset="" class="w-60 h-44 absolute">
+            </div>
+            <div class="grid px-20 pr-72 border-stone-500 border-r-2">
+    
+                <h1 class="text-white text-2xl opacity-90">Contact With Us</h1>br
+                <h1 class="text-white text-lgmd opacity-90">Address:</h1>
+                <p class="text-white text-md opacity-70">United City, Madani Avenue, <br>
+                    Badda, Dhaka - 1212, Bangladesh.</p><br>
+    
+                    <h1 class="text-white text-xl opacity-90">Call:</h1>
+                <p class="text-white text-md opacity-70">+8801712950127, <br>
+                    +8801810046480</p><br>
+    
+                    <h1 class="text-white text-xl opacity-90">Email:</h1>
+                    <p class="text-white text-md opacity-70">mkhan203010@gmail.com <br>
+                        </p>
+    
+    
+            </div>
+
+            <div class="grid px-10 ">
+                <h1 class="text-white text-xl pl-5 opacity-90">Find Us on Social Platforms</h1>
+                <div class="flex absolute">
+                <a href="https://www.facebook.com/mdk.fahim/" class="pl-5 mt-14"><img src="{% static 'IMG/facebook.png' %}" alt=""></a>
+                <a href="https://www.facebook.com/iamDip" class="pl-5 mt-14"><img src="{% static 'IMG/facebook.png' %}" alt=""></a>
+                </div>
+            </div>
+
+        </div >
+        
+        <div class="grid justify-center relative top-12">
+            <img src="{% static 'IMG/team logo white.png' %}" alt="" srcset="" class="w-60">
+            <p class="text-white opacity-60">All Right Reserved Team Encrypted Cops</p>
+        </div>
+
+    </footer>
+</body>
+
+</html> 
