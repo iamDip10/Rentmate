@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -96,7 +97,7 @@ DATABASES = {
         }  
     }  
 }
-CSRF_TRUSTED_ORIGINS = ["https://449b-103-120-37-16.ngrok-free.app"]
+CSRF_TRUSTED_ORIGINS = [" https://9621-103-120-37-16.ngrok-free.app "]
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
