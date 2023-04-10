@@ -43,9 +43,10 @@ def loginPage(req):
                 req.session['residant'] = phnn
                 return redirect('dashP', phn=ecnr)
         elif typee == "Property owner":
-            res = Pro_owner.objects.get(phn = phnn)
-            if passs == res.psword:
-                pass   
+            own = Pro_owner.objects.get(phn = phnn)
+            if passs == own.psword:
+                encrp = signing.dumps(phnn, key=key) 
+                return redirect('b_dash', number = encrp)
     return render(req, "loginn.html") 
 
 
@@ -188,6 +189,12 @@ def complain(req, phn):
 
     return redirect ("complain", phn=id)
 
+def rate(req, phn):
+    phone = signing.loads(phn, key=key)
+    if req.method == "POST":
+        _rating = req.POST['rating']
+        
+
 
 def payment(req, phn):
     real = signing.loads(phn, key=key)
@@ -321,3 +328,12 @@ def logoutPage(req):
     activ.save()
     req.session.flush()
     return redirect('login')
+
+def bwdash(req, number) :
+    phn = signing.loads(number, key=key)
+    obj = Pro_owner.objects.get(phn = phn)
+    
+    data = {
+        'mom' : obj,
+    }
+    return render(req, 'bwdashboard.html', data)  

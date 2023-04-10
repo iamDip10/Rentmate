@@ -88,3 +88,12 @@ class otherActivity(models.Model) :
     
     class Meta:
         db_table = "otherActivity"
+        
+class rating (models.Model) :
+    residnt = models.ForeignKey(Residant, on_delete=models.CASCADE, default="")
+    owner = models.ForeignKey(Pro_owner, on_delete=models.CASCADE, default="") 
+    rate = models.CharField(max_length=100, default="0") 
+    commnt = models.CharField(max_length=300, default="" )
+    
+    class Meta:
+        db_table = "ratting"

@@ -327,7 +327,8 @@
                     </div>
 
                     <div class="mt-3 ml-2 grid justify-start">
-                        <form action="" class="grid justify-start">
+                        <form action="{% url 'rate' phn=key %}" method="POST" class="grid justify-start">
+                            {{csrf_token}}
                             <div class="ratingControl relative left-0">
                                 <input id="score100" class="ratingControl__radio" type="radio" name="rating"
                                     value="100" />
