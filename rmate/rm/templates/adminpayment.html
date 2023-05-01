@@ -1,0 +1,293 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="/IMAGES/fevicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Noto+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="starRate.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+
+    
+
+    <title>ADMIN PAYMENT | Rentmate</title>
+</head>
+
+<style>
+
+    *::-webkit-scrollbar{
+        display: none;
+
+    }
+    input:focus {
+    outline: none;
+    transition: 0.6s;
+    }
+    textarea:focus {
+    outline: none;
+    transition: 0.6s;
+    }
+    #dBoard{
+        color: #ffffff;
+
+
+    }
+
+    #dBoard:hover {
+
+  
+        text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ff4000;
+
+    }
+
+    #sidebarAnimate:hover{
+        border: #ffa200;
+        box-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ff4000;
+        
+    }
+    #text{
+        text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;
+
+    }
+    #CLS:hover{
+        box-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ff4000;
+        border-radius: 20px;
+
+    }
+    #OPN:hover{
+        text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;
+    }
+
+
+</style>
+<body class="bg-gradient-to-bl from-stone-800 via-stone-900 to-black text-white" style="font-family: 'Poppins', sans-serif;">
+    <div class="flex mr-2 h-screen w-full " >
+
+
+        <!-- Sidebar -->
+        <div class="backdrop-blur-xl shadow-2xl border-r-2 border-white border-opacity-10 backdrop-brightness-150 h-full w-0 grid p-5 z-50 fixed" id="sidebarAnimate">
+            
+            
+            <div class="grid">
+                <button title="close" id="closeBtn" style="display: none;" onclick="closeSide()" class="absolute left-52">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="CLS" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                      
+                </button>
+                
+            </div>
+
+            <div>
+                <button class="relative -left-3 w-fit  rounded-full" id="openBtn" onclick="OpenSide()">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" id="OPN" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                      </svg>
+                </button>
+                  
+            </div>
+
+            <div id="elements" class="ml-1 h-screen flex flex-col w-full " style="display: none;">
+                <div class="flex flex-col w-52 mt-44 ">
+                    <img src="IMAGES/team logo white.png" alt="">
+                </div>
+
+
+                <div class="relative bottom-8" id="text">
+                    <h1 class="text-sm">ADMIN</h1>
+                    <h1 class="text-sm">DASHBOARD <br> CONTROL</h1>
+                </div>
+
+
+                <div class="grid mt-44" >
+                    <ul>
+                        <li class="text-sm mt-10  transition-all"><a href="{% url 'adminm' %}" id="dBoard"> Dashboard</a></li>
+                        <li class="text-sm mt-10 opacity-60 hover:opacity-100 transition-all"><a href="{% url 'adminp' %}" id="dBoard"> Payments & Bills</a></li>
+                        
+                        <li class="text-sm mt-10 opacity-60 hover:opacity-100 transition-all"><a href="{% url 'admins' %}" id="dBoard"> Settings and Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+        <div class="flex flex-col w-full ml-20 overflow-scroll">
+
+            <div class="mb-2 ">
+                <div class="flex mt-20 ">
+                    <img src="IMAGES/darain.jpg" class="w-16 h-16   border-orange-400 rounded-full "  alt="">
+    
+                    <div class="grid h-fit relative top-5 left-2">
+                        <h1 class="text-xs">Welcome,</h1>
+                        <h1 class="text-sm" style=" text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;">Mohammad Darain Khan Fahim</h1>
+                    </div>
+                </div>
+    
+                <div class="mt-10">
+    
+                    <div class="grid">
+                        <h1  class="text-8xl tracking-wider font-extrabold" style=" text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;">TEAM ENCRYPTED COPS</h1>
+                        <h1 class="text-sm tracking tracking-widest">ACCOUNTS SECTION</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex w-full mt-20 mb-10">
+                <div class=" border w-full border-orange-900 p-3 rounded-2xl flex h-fit mt-5  mr-5" style=" text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;">
+                    <div class="border-r pr-5 w-full border-orange-500">
+                        <h1 class="text-xs">Yearly Revenue</h1>
+                        <h1 class="text-xl">90000000 BDT</h1>
+                    </div>
+
+                    <div class="ml-5 border-r pr-5 w-full border-orange-500">
+                        <h1 class="text-xs">Monthly Revenue</h1>
+                        <h1 class="text-xl">4000000 BDT</h1>
+                    </div>
+
+                    <div class="ml-5 border-r pr-5 w-full border-orange-500">
+                        <h1 class="text-xs">Weekly Revenue</h1>
+                        <h1 class="text-xl">2,00,000 BDT</h1>
+                    </div>
+                    <div class="ml-5 border-r pr-5 w-full border-orange-500">
+                        <h1 class="text-xs">Daily Revenue</h1>
+                        <h1 class="text-xl">100000 BDT</h1>
+                    </div>
+
+                    <div class="ml-5  pr-5 w-full">
+                        <h1 class="text-xs">Total Projects</h1>
+                        <h1 class="text-xl">5</h1>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+
+            <div class="h-96 overflow-scroll backdrop-blur-xl shadow-2xl">
+
+                <table class="text-white text-sm w-full mt-7 " >
+                    <thead class="" style=" text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;">
+    
+                        <th class="pr-5  p-5  pl-3 bg-transparent border border-orange-800 rounded-md"><h1 class="text-white">Payment Ammount</h1></th>
+                        <th class="pr-5 p-5  pl-3  border border-orange-800 rounded-md"><h1 class="text-white">Transaction ID</h1></th>
+                        <th class="pr-5 p-5  pl-3 border border-orange-800 rounded-md"><h1 class="text-white">Payment Method</h1></th>
+                        <th class="pr-5 p-5  pl-3 border border-orange-800 rounded-md"><h1 class="text-white">Date And Time</h1></th>
+
+
+    
+                    </thead>
+                    <tbody class="font-extralight" style=" text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;">
+                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">5000</td>
+
+                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">5hvj87346fih</td>
+                        
+                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">Bank</td>
+
+                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">12-12-12</td>
+                        
+    
+                       
+                    </tbody>
+    
+
+                    <tbody class="font-extralight" style=" text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;">
+                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">5000</td>
+
+                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">5hvj87346fih</td>
+                        
+                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">Bank</td>
+
+                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">12-12-12</td>
+                        
+    
+                       
+                    </tbody>
+
+
+
+                    <tbody class="font-extralight" style=" text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;">
+                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">5000</td>
+
+                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">5hvj87346fih</td>
+                        
+                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">Bank</td>
+
+                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">12-12-12</td>
+                        
+    
+                       
+                    </tbody>
+    
+                    
+
+    
+                    
+                    
+                   
+                </table>
+            </div>
+
+
+
+
+            
+        </div>
+
+ 
+        
+
+    </div>
+
+
+    <script>
+
+        function OpenSide(){
+            document.getElementById("sidebarAnimate").style.width="16rem";
+            document.getElementById("elements").style.display="block";
+            document.getElementById("closeBtn").style.display="block";
+            document.getElementById("openBtn").style.display = "none";
+
+            
+        }
+
+        function closeSide(){
+            
+            document.getElementById("sidebarAnimate").style.width="0px";
+            document.getElementById("elements").style.display="none";
+            document.getElementById("openBtn").style.display = "block";
+            document.getElementById("closeBtn").style.display="none";
+            
+        }
+    </script>
+
+
+</body>
+</html>

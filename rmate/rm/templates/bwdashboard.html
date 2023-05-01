@@ -3,6 +3,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,126 +13,146 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Noto+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Noto+Sans:wght@500&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="{% static 'CSS/starRate.css' %}">
-    
+
 
     <title>Dashboard | Rentmate</title>
 </head>
 
 <style>
-
-    *::-webkit-scrollbar{
+    *::-webkit-scrollbar {
         display: none;
 
     }
+
     input:focus {
-    outline: none;
-    transition: 0.6s;
+        outline: none;
+        transition: 0.6s;
     }
+
     textarea:focus {
-    outline: none;
-    transition: 0.6s;
+        outline: none;
+        transition: 0.6s;
     }
-
-
-
 </style>
+
 <body class=" bg-gradient-to-r from-[#5d1961]  to-gray-900 text-white" style="font-family: 'Poppins', sans-serif;">
-    <div class="flex flex-wrap mr-2 h-screen w-full" >
-        <div class="bg-gradient-to-b from-[#5d1961]  to-gray-900 shadow-2xl border-r border-fuchsia-900 w-1/6 h-screen  pt-10 fixed">
+    <div class="flex flex-wrap mr-2 h-screen w-full">
+        <div
+            class="bg-gradient-to-b from-[#5d1961]  to-gray-900 shadow-2xl border-r border-fuchsia-900 w-1/6 h-screen  pt-10 fixed">
             <img src="{% static 'IMG/white 1.png'%}" alt="" class="sidebar w-40 pl-2 mr-36 ml-8 fill-white">
-            
+
 
             <div class="flex justify-between h-full w-full pr-16 mt-20 scale-90 shadow-sm" id="Sidebar">
 
                 <ul class="mt-5 ml-5">
-                    <li class="flex mb-7 " > 
-                        <a href="" class="flex scale-90 mb-5 opacity-70 hover:opacity-100 transition-all">
-    
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
-                              </svg>
-                              <h1 class="ml-3">Dashboard</h1>
-                        </a>
+                    <li class="flex mb-7 ">
                         
-                    </li>
-                    <li class="flex pb-7">
-                        <a href="" class="flex scale-90 pb-5 opacity-70 hover:opacity-100 transition-all">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
-                              </svg>
-                              <h1 class="ml-3"> Complaints</h1>
+                        <a href="" class="flex scale-90 mb-5 opacity-70 hover:opacity-100 transition-all">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+                            </svg>
+                            <h1 class="ml-3 font-extrabold text-lg">Dashboard</h1>
                         </a>
-                       
+
                     </li>
                     <li class="flex pb-7">
-                        <a href="" class="flex scale-90 pb-5 opacity-70 hover:opacity-100 transition-all">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                              </svg>
-                              <h1 class="ml-3">Payments & Bills</h1>                          
+                        <a href="{% url 'bcomp' number=num %}" class="flex scale-90 pb-5 opacity-70 hover:opacity-100 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                            </svg>
+                            <h1 class="ml-3"> Complaints</h1>
+                        </a>
+
+                    </li>
+                    <li class="flex pb-7">
+                        <a href="{% url 'bpay' number=num %}" class="flex scale-90 pb-5 opacity-70 hover:opacity-100 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <h1 class="ml-3">Payments & Bills</h1>
                         </a>
                     </li>
                     <li class="flex">
                         <a href="" class="flex"></a>
-    
+
                     </li>
                     <li class="flex pb-7">
-                        <a href="" class="flex scale-90 pb-5 ">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
-                              </svg>
-                              
-                              <h1 class="ml-3">See All Renters</h1>
+                        <a href="{% url 'renters' number=num %}" class="flex scale-90 pb-5 opacity-70 hover:opacity-100 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
+                            </svg>
+
+                            <h1 class="ml-3">See All Renters</h1>
                         </a>
-                        
+
                     </li>
                     <li class="flex pb-7">
-                        <a href="" class="flex scale-90 pb-5 opacity-70 hover:opacity-100 transition-all">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                              </svg>
-                              <h1 class="ml-3">House Upgrade</h1>
+                        <a href="{% url 'houseup' number=num%}" class="flex scale-90 pb-5 opacity-70 hover:opacity-100 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                            </svg>
+                            <h1 class="ml-3">House Upgrade</h1>
                         </a>
                     </li>
                     <li class="flex pb-7">
-                        <a href="" class="flex scale-90 pb-5 opacity-70 hover:opacity-100 transition-all">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12a7.5 7.5 0 0015 0m-15 0a7.5 7.5 0 1115 0m-15 0H3m16.5 0H21m-1.5 0H12m-8.457 3.077l1.41-.513m14.095-5.13l1.41-.513M5.106 17.785l1.15-.964m11.49-9.642l1.149-.964M7.501 19.795l.75-1.3m7.5-12.99l.75-1.3m-6.063 16.658l.26-1.477m2.605-14.772l.26-1.477m0 17.726l-.26-1.477M10.698 4.614l-.26-1.477M16.5 19.794l-.75-1.299M7.5 4.205L12 12m6.894 5.785l-1.149-.964M6.256 7.178l-1.15-.964m15.352 8.864l-1.41-.513M4.954 9.435l-1.41-.514M12.002 12l-3.75 6.495" />
-                              </svg>
-                              
-                              <h1 class="ml-3">Settings & Privacy</h1>
+                        <a href="{% url 'bsettings' number=num %}" class="flex scale-90 pb-5 opacity-70 hover:opacity-100 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.5 12a7.5 7.5 0 0015 0m-15 0a7.5 7.5 0 1115 0m-15 0H3m16.5 0H21m-1.5 0H12m-8.457 3.077l1.41-.513m14.095-5.13l1.41-.513M5.106 17.785l1.15-.964m11.49-9.642l1.149-.964M7.501 19.795l.75-1.3m7.5-12.99l.75-1.3m-6.063 16.658l.26-1.477m2.605-14.772l.26-1.477m0 17.726l-.26-1.477M10.698 4.614l-.26-1.477M16.5 19.794l-.75-1.299M7.5 4.205L12 12m6.894 5.785l-1.149-.964M6.256 7.178l-1.15-.964m15.352 8.864l-1.41-.513M4.954 9.435l-1.41-.514M12.002 12l-3.75 6.495" />
+                            </svg>
+
+                            <h1 class="ml-3">Settings & Privacy</h1>
                         </a>
                     </li>
 
 
                     <li class="flex pb-7 pl-1 mt-16">
-                        <a href="" class="flex scale-90 pb-5 opacity-70 hover:opacity-100 transition-all">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
-                              </svg>
-                              <h1 class="ml-3">Sign out</h1>
+                        <a href="{% url 'loout'%}" class="flex scale-90 pb-5 opacity-70 hover:opacity-100 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
+                            </svg>
+                            <h1 class="ml-3">Sign out</h1>
                         </a>
                     </li>
 
 
-    
+
                 </ul>
             </div>
 
         </div>
         <div class="w-full" id="NavAndOthers" style="margin-left: 33vh; margin-right: 2vh;">
-            <nav class=" ml-10 rounded-xl mt-10 bg-gradient-to-r from-fuchsia-900 via-oran-900 to-gray-900 border border-fuchsia-900  flex justify-between shadow-2xl" id="navBar">
+            <nav class=" ml-10 rounded-xl mt-10 bg-gradient-to-r from-fuchsia-900 via-oran-900 to-gray-900 border border-fuchsia-900  flex justify-between shadow-2xl"
+                id="navBar">
 
-                
+
 
 
 
@@ -143,95 +164,115 @@
                 <div class="flex  mr-9 mt-6">
                     <div class="ml-5 mt-2">
                         <button>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 opacity-80" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd" />
-                              </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 opacity-80" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z"
+                                    clip-rule="evenodd" />
+                            </svg>
                         </button>
                     </div>
 
                     <div class="ml-5 mt-2">
                         <button>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 opacity-80" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
-                              </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 opacity-80" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
+                            </svg>
                         </button>
                     </div>
 
                     <div class="ml-5">
-                        <img src="{% static 'IMG/dip.png' %} " class=" w-10 h-10  rounded-full border" alt="">
+                        <img src="{{ mom.picc.url}} " class=" w-10 h-10  rounded-full border" alt="">
                     </div>
                 </div>
             </nav>
-            
-            
+
+
             <div class="flex flex-warp " id="Main">
                 <div class="w-4/6 p-2 h-fit  shadow flex flex-col ">
-           
+
                     <div class="flex w-full " id="revenueCards">
-                   
-                        <div class="ml-10 flex flex-wrap w-full" id="FirstRevenueCard">
-            
-                            <div class=" bg-gradient-to-r from-fuchsia-900  to-gray-900 border border-fuchsia-900 h-fit w-80 p-3 rounded-lg mt-14 flex " >
+
+                        <div class="ml-10 flex flex-wrap w-1/3" id="FirstRevenueCard">
+
+                            <div
+                                class=" bg-gradient-to-r from-fuchsia-900  to-gray-900 border border-fuchsia-900 h-fit w-full p-3 rounded-lg mt-14 flex ">
                                 <div class="flex ">
                                     <div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 mt-2 mr-2 text-orange-500 border rounded-full border-[#46474a]">
-                                            <path d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 01-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004zM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 01-.921.42z" />
-                                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v.816a3.836 3.836 0 00-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 01-.921-.421l-.879-.66a.75.75 0 00-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 001.5 0v-.81a4.124 4.124 0 001.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 00-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 00.933-1.175l-.415-.33a3.836 3.836 0 00-1.719-.755V6z" clip-rule="evenodd" />
-                                          </svg>
-                                          
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="w-10 h-10 mt-2 mr-2 text-orange-500 border rounded-full border-[#46474a]">
+                                            <path
+                                                d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 01-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004zM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 01-.921.42z" />
+                                            <path fill-rule="evenodd"
+                                                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v.816a3.836 3.836 0 00-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 01-.921-.421l-.879-.66a.75.75 0 00-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 001.5 0v-.81a4.124 4.124 0 001.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 00-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 00.933-1.175l-.415-.33a3.836 3.836 0 00-1.719-.755V6z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
                                     </div>
                                     <div>
                                         <h1 class="text-md font-light"> All Time Revenue</h1>
-                                        <h1 class="text-2xl font-light tracking-wider"> 900000 Taka</h1>
+                                        <h1 class="text-2xl font-light tracking-wider"> {{alltime.sum}} Taka</h1>
                                     </div>
                                 </div>
                                 <div>
-                                    
+
                                 </div>
                             </div>
-            
-                            
+
+
                         </div>
-            
-            
-            
-                        <div class="ml-5 flex flex-wrap  w-full" id="SecRevenueCard">
-            
-                            <div class="bg-gradient-to-r from-fuchsia-900  to-gray-900 border border-fuchsia-900 h-fit w-80 p-3 rounded-lg mt-14 flex">
+
+
+
+                        <div class="ml-5 flex flex-wrap  w-1/3" id="SecRevenueCard">
+
+                            <div
+                                class="bg-gradient-to-r from-fuchsia-900  to-gray-900 border border-fuchsia-900 h-fit w-full p-3 rounded-lg mt-14 flex">
                                 <div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 mt-2 mr-2 text-orange-500 border rounded-full border-[#46474a]">
-                                        <path d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 01-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004zM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 01-.921.42z" />
-                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v.816a3.836 3.836 0 00-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 01-.921-.421l-.879-.66a.75.75 0 00-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 001.5 0v-.81a4.124 4.124 0 001.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 00-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 00.933-1.175l-.415-.33a3.836 3.836 0 00-1.719-.755V6z" clip-rule="evenodd" />
-                                      </svg>
-                                      
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="w-10 h-10 mt-2 mr-2 text-orange-500 border rounded-full border-[#46474a]">
+                                        <path
+                                            d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 01-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004zM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 01-.921.42z" />
+                                        <path fill-rule="evenodd"
+                                            d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v.816a3.836 3.836 0 00-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 01-.921-.421l-.879-.66a.75.75 0 00-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 001.5 0v-.81a4.124 4.124 0 001.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 00-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 00.933-1.175l-.415-.33a3.836 3.836 0 00-1.719-.755V6z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+
                                 </div>
                                 <div>
                                     <h1 class="text-md font-light"> Monthly Revenue</h1>
-                                    <h1 class="text-2xl font-light tracking-wider"> 900000 Taka</h1>
+                                    <h1 class="text-2xl font-light tracking-wider">{{month.sum}} Taka</h1>
                                 </div>
                             </div>
-            
-                            
+
+
                         </div>
-            
-                        <div class="ml-5 flex flex-wrap mr-5 w-full" id="ThirdRevenueCard">
-                            
-            
-                            <div class="bg-gradient-to-r from-fuchsia-900  to-gray-900 border border-fuchsia-900 h-fit w-80 p-3 rounded-lg mt-14 flex">
+
+                        <div class="ml-5 flex flex-wrap mr-5 w-1/3" id="ThirdRevenueCard">
+
+
+                            <div
+                                class="bg-gradient-to-r from-fuchsia-900  to-gray-900 border border-fuchsia-900 h-fit w-full p-3 rounded-lg mt-14 flex">
                                 <div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 mt-2 mr-2 text-orange-500 border rounded-full border-[#46474a]">
-                                        <path d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 01-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004zM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 01-.921.42z" />
-                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v.816a3.836 3.836 0 00-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 01-.921-.421l-.879-.66a.75.75 0 00-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 001.5 0v-.81a4.124 4.124 0 001.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 00-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 00.933-1.175l-.415-.33Za3.836 3.836 0 00-1.719-.755V6z" clip-rule="evenodd" />
-                                      </svg>
-                                      
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="w-10 h-10 mt-2 mr-2 text-orange-500 border rounded-full border-[#46474a]">
+                                        <path
+                                            d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 01-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004zM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 01-.921.42z" />
+                                        <path fill-rule="evenodd"
+                                            d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v.816a3.836 3.836 0 00-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 01-.921-.421l-.879-.66a.75.75 0 00-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 001.5 0v-.81a4.124 4.124 0 001.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 00-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 00.933-1.175l-.415-.33Za3.836 3.836 0 00-1.719-.755V6z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+
                                 </div>
                                 <div>
                                     <h1 class="text-md font-light">Revenue in This Year</h1>
-                                    <h1 class="text-2xl font-light tracking-wider"> 900000 Taka</h1>
+                                    <h1 class="text-2xl font-light tracking-wider"> {{year.sum}} Taka</h1>
                                 </div>
                             </div>
-            
-                            
+
+
                         </div>
                     </div>
 
@@ -247,383 +288,401 @@
 
 
 
-                    
-        
+
+
                     <div class="flex w-full h-fit overflow-scroll mt-5 mr-5">
-                        <div class="bg-gradient-to-r from-fuchsia-900  to-gray-900 border border-fuchsia-900 h-fit w-1/2 p-3 rounded-lg  flex justify-between ml-10 ">
+                        <div
+                            class="bg-gradient-to-r from-fuchsia-900  to-gray-900 border border-fuchsia-900 h-fit w-1/2 p-3 rounded-lg  flex justify-between ml-10 ">
                             <h1>Remaining Payments</h1>
-                            <h1 class="text-lg">3</h1>
+                            <h1 class="text-lg">{{notpaid}}</h1>
                         </div>
-                        <div class="bg-gradient-to-r from-fuchsia-900  to-gray-900 border border-fuchsia-900 h-fit w-1/2 p-3 rounded-lg  flex justify-between ml-10 mr-5">
+                        <div
+                            class="bg-gradient-to-r from-fuchsia-900  to-gray-900 border border-fuchsia-900 h-fit w-1/2 p-3 rounded-lg  flex justify-between ml-10 mr-5">
                             <h1>Complete Payments</h1>
-                            <h1 class="text-lg">8</h1>
+                            <h1 class="text-lg">{{ paid }}</h1>
                         </div>
-                        
+
                     </div>
-        
+
                     <div class="flex justify-between  w-full h-fit overflow-scroll mt-5 mr-5">
-                       
-                        <div class="bg-gradient-to-r from-fuchsia-900  to-gray-900 border border-fuchsia-900 h-fit w-full p-3 rounded-lg  flex justify-between ml-10 mr-5 ">
-                            
-        
-        
+
+                        <div
+                            class="bg-gradient-to-r from-fuchsia-900  to-gray-900 border border-fuchsia-900 h-fit w-full p-3 rounded-lg  flex justify-between ml-10 mr-5 ">
+
+
+
                             <div class="flex flex-col">
                                 <h1>Overview</h1>
                                 <div class="mt-4  p-3 border-b">
                                     <h1 class="text-sm">Revenue Increased (This Month)</h1>
                                     <div class="flex flex-warp ">
-        
+
                                         <div class="flex">
                                             <h1 class="text-3xl">90000</h1>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-2 text-green-500 opacity-80 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 4a1 1 0 000 2 1 1 0 011 1v1H7a1 1 0 000 2h1v3a3 3 0 106 0v-1a1 1 0 10-2 0v1a1 1 0 11-2 0v-3h3a1 1 0 100-2h-3V7a3 3 0 00-3-3z" clip-rule="evenodd" />
-                                              </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="h-5 w-5 mt-2 text-green-500 opacity-80 ml-1" viewBox="0 0 20 20"
+                                                fill="currentColor">
+                                                <path fill-rule="evenodd"
+                                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 4a1 1 0 000 2 1 1 0 011 1v1H7a1 1 0 000 2h1v3a3 3 0 106 0v-1a1 1 0 10-2 0v1a1 1 0 11-2 0v-3h3a1 1 0 100-2h-3V7a3 3 0 00-3-3z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
                                         </div>
-                                        
-        
+
+
                                         <div class="mt-1 ml-5 flex h-fit bg-green-900 bg-opacity-50 p-1 rounded-full">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4  text-green-500">
-                                                <path fill-rule="evenodd" d="M11.47 4.72a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 6.31l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5zm.53 7.59l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 12.31z" clip-rule="evenodd" />
-                                              </svg>
-                                              <h1 class="text-sm text-green-500">+24.5k</h1>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="w-4 h-4  text-green-500">
+                                                <path fill-rule="evenodd"
+                                                    d="M11.47 4.72a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 6.31l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5zm.53 7.59l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 12.31z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            <h1 class="text-sm text-green-500">+24.5k</h1>
                                         </div>
                                     </div>
                                 </div>
-            
-            
+
+
                                 <div class="text-stone-200 pr-20 pt-5  flex">
-        
+
                                     <div class="">
                                         <div class="h-full w-4/5 pt-1">
                                             <div class="flex flex-warp">
                                                 <div class=" p-5">
                                                     <h1 class="text-xs border-l p-1">Total Appartment</h1>
-                                                    <h1 class="text-xl border-l p-1">11</h1>
+                                                    <h1 class="text-xl border-l p-1">{{ ttotal }}</h1>
                                                 </div>
                                                 <div class=" p-5">
                                                     <h1 class="text-xs border-l p-1">Rented Appertment</h1>
-                                                    <h1 class="text-xl border-l p-1">9</h1>
+                                                    <h1 class="text-xl border-l p-1">{{ occupy.count}}</h1>
                                                 </div>
                                             </div>
                                             <div class="flex flex-warp pt-1">
                                                 <div class="p-5">
                                                     <h1 class="text-xs border-l p-1">Empty Appartment</h1>
-                                                    <h1 class="text-xl border-l p-1">2</h1>
+                                                    <h1 class="text-xl border-l p-1">{{noccupy}}</h1>
                                                 </div>
                                                 <div class="p-5">
                                                     <h1 class="text-xs border-l p-1">Posted Ads</h1>
-                                                    <h1 class="text-xl border-l p-1">4</h1>
+                                                    <h1 class="text-xl border-l p-1">{{adver}}</h1>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-        
-    
+
+
                             </div>
-        
-        
+
+
                             <div class="w-full ml-5">
                                 <div class="w-full h-full">
                                     <canvas id="myChart"></canvas>
-                                  </div>
-        
+                                </div>
+
                             </div>
-                            
+
                         </div>
-                        
-                      
-                        
+
+
+
                     </div>
 
-                    <div class="flex w-full">
-                        <div class="bg-gradient-to-r from-fuchsia-900  to-gray-900 border border-fuchsia-900 h-fit w-fit p-3 rounded-lg  grid justify-start ml-10 mt-5 mr-5 ">
-                            <div class="">
-                                <h1 class="text-left">Your Rating</h1>
+                    <div class="flex flex-row w-full h-fit">
+                        <div
+                            class="bg-gradient-to-r from-fuchsia-900  to-gray-900 border border-fuchsia-900 h-fit w-full p-3 rounded-lg  flex flex-row justify-left ml-10 mt-5 mr-5 ">
+
+                            <div class="flex flex-col justify-start">
+
+                                <div class="">
+                                    <h1 class="text-left">Your Rating</h1>
+                                </div>
+
+                                <div class=" w-fit h-fit">
+                                    <div class="flex flex-row w-fit h-full">
+                                        <canvas id="myChart2"></canvas>
+                                    </div>
+
+                                </div>
                             </div>
-    
-                            <div class="w-full ml-5">
-                                <div class="w-full h-full">
-                                    <canvas id="myChart2"></canvas>
-                                  </div>
-        
+                            <!-- bg-gradient-to-r from-fuchsia-900  to-gray-900 border border-fuchsia-900  -->
+                            <div
+                                class="h-full w-full overflow-scroll rounded-lg flex flex-col justify-start mx-20 mr-5 ">
+                                <div class="">
+                                    <h1 class="text-left">Comments</h1>
+                                    <h1 class="text-xs font-thin">See what your renters think about you</h1>
+                                </div>
+                                {% for comnts in cmnts %}
+                                    {% if comnts.commnt != '' %}
+                                        <div
+                                            class="w-full h-full bg-gradient-to-r from-fuchsia-900  to-gray-900 border border-fuchsia-900 p-3 rounded-lg mt-3">
+
+                                            <h3>{{comnts.commnt}}</h3>
+                                        </div>
+                                    {% endif%}
+                                {% endfor%}
                             </div>
-                            
                         </div>
 
-                        <div class="bg-gradient-to-r from-fuchsia-900  to-gray-900 border border-fuchsia-900 h-96 overflow-scroll w-full p-3 rounded-lg  grid justify-start ml-10 mt-5 mr-5 ">
-                            <div class="">
-                                <h1 class="text-left">Comments</h1>
-                                <h1 class="text-xs font-thin">See what your renters think about you</h1>
-                            </div>
-    
-                            <div class="w-full ">
-                                <table class=" rounded-xm mt-5">
-                                    <thead>
-                                        <tr class="">
-                                            <th class="p-2 border border-opacity-30 rounded-sm font-light">Rating</th>
-                                            <th class="p-2 border border-opacity-30 rounded-sm font-light">Comment</th>
-                                            
-                                        </tr>
-                                        
-                                    </thead>
-
-                                    <tbody>
-                                        <tr>
-                                           <td class="p-2 border border-opacity-30 rounded-sm text-sm font-thin">5 star</td>
-                                           <td class="p-2 border border-opacity-30 rounded-sm text-sm font-thin">Bariwalaa bohut bhaalo amar meye biye ami bariwalarshathey dibo</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p-2 border border-opacity-30 rounded-sm text-sm font-thin">5 star</td>
-                                            <td class="p-2 border border-opacity-30 rounded-sm text-sm font-thin">Amii ei bariwala baade kaoke biye korbona </td>
-                                         </tr>
-
-                                         <tr>
-                                            <td class="p-2 border border-opacity-30 rounded-sm text-sm font-thin">4 star</td>
-                                            <td class="p-2 border border-opacity-30 rounded-sm text-sm font-thin">Bariwala bhalaa toi bathroom er comod shaira deina </td>
-                                         </tr>
-
-                                                                                  <tr>
-                                            <td class="p-2 border border-opacity-30 rounded-sm text-sm font-thin">5 star</td>
-                                            <td class="p-2 border border-opacity-30 rounded-sm text-sm font-thin">Na bhalo ase </td>
-                                         </tr>
-
-
-                                         <tr>
-                                            <td class="p-2 border border-opacity-30 rounded-sm text-sm font-thin">5 star</td>
-                                            <td class="p-2 border border-opacity-30 rounded-sm text-sm font-thin">Bhaiyaaaa chade ashen naaaaa!aww </td>
-                                         </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            
-                        </div>
                     </div>
 
 
-                    
+
                 </div>
-                <div class="border mt-14  rounded-2xl w-1/3  h-fit bg-gradient-to-r from-fuchsia-900  to-gray-900  border-fuchsia-900">
-                        <div class="colors w-full">
-                        <div class="one h-10 rounded-t-xl w-full opacity-100" style ="background: linear-gradient(to right, #b220cc, transparent,#b220cc);"></div>
-                        <div class="one h-10  w-full opacity-80" style ="background: linear-gradient(to right, #b220cc, transparent,#b220cc);"></div>
-                        <div class="one h-10  w-full opacity-60" style ="background: linear-gradient(to right, #b220cc, transparent,#b220cc);"></div>
-                        <div class="one h-10  w-full opacity-40" style ="background: linear-gradient(to right, #b220cc, transparent,#b220cc);"></div>
-                        <div class="one h-10  w-full opacity-20" style ="background: linear-gradient(to right, #b220cc, transparent,#b220cc);"></div>
-            
-            
+                <div
+                    class="border mt-14  rounded-2xl w-1/3  h-fit bg-gradient-to-r from-fuchsia-900  to-gray-900  border-fuchsia-900">
+                    <div class="colors w-full">
+                        <div class="one h-10 rounded-t-xl w-full opacity-100"
+                            style="background: linear-gradient(to right, #b220cc, transparent,#b220cc);"></div>
+                        <div class="one h-10  w-full opacity-80"
+                            style="background: linear-gradient(to right, #b220cc, transparent,#b220cc);"></div>
+                        <div class="one h-10  w-full opacity-60"
+                            style="background: linear-gradient(to right, #b220cc, transparent,#b220cc);"></div>
+                        <div class="one h-10  w-full opacity-40"
+                            style="background: linear-gradient(to right, #b220cc, transparent,#b220cc);"></div>
+                        <div class="one h-10  w-full opacity-20"
+                            style="background: linear-gradient(to right, #b220cc, transparent,#b220cc);"></div>
+
+
+                    </div>
+
+
+
+                    <div class="relative -top-48 h-fit">
+                        <div class="p-5 h-fit w-full flex justify-center">
+                            <img src="{{ mom.picc.url}}" class="rounded-full w-48 h-48" alt="">
+                        </div>
+                        <div class="grid justify-center">
+                            <div class="flex flex-col  pb-6">
+                                <h1 class="justify-center flex">{{ mom.fname|add:" "|add:mom.lname}}</h1>
+                                <h1 class="text-sm font-thin flex justify-center"></h1>
+                                <h1 class="text-sm font-thin flex justify-center">House Owner</h1>
+                            </div>
+                            <div class="border h-0.5 w-full relative opacity-20"></div>
+
+                            <div class="flex flex-col mt-10  pl-5 pb-5 pr-5">
+                                <div class="flex justify-between">
+                                    <h1 class="text-sm mb-5">Owner's Informations: </h1>
+
+                                    <button title="Edit Informations">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="w-6 h-6 mb-5">
+                                            <path fill-rule="evenodd"
+                                                d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+                                    </button>
+
+                                </div>
+
+
+                                <div class="flex font-thin text-sm mb-2">
+                                    <h1 class="">Name: </h1>
+                                    <h1 class="justify-start flex ml-3">{{ mom.fname|add:" "|add:mom.lname }}</h1>
+                                </div>
+                                <div class="flex font-thin text-sm mb-2">
+                                    <h1 class="">Address: </h1>
+                                    <h1 class="justify-start flex ml-3">{{mom.p_addrs}}</h1>
+                                </div>
+                                <div class="flex font-thin text-sm mb-2">
+                                    <h1 class="">City: </h1>
+                                    <h1 class="justify-start flex ml-3">Mirpur</h1>
+                                </div>
+                                <div class="flex font-thin text-sm mb-2">
+                                    <h1 class="">District: </h1>
+                                    <h1 class="justify-start flex ml-3">Dhaka</h1>
+                                </div>
+                                <div class="flex font-thin text-sm mb-2">
+                                    <h1 class="">Division: </h1>
+                                    <h1 class="justify-start flex ml-3">Dhaka</h1>
+                                </div>
+                                <div class="flex font-thin text-sm mb-2">
+                                    <h1 class="">House Number: </h1>
+                                    <h1 class="justify-start flex ml-3">{{mom.hid}}</h1>
+                                </div>
+
+
+                            </div>
+                            <div class="border h-0.5 w- relative opacity-20"></div>
+
+                            <div>
+                                <div class="flex flex-col pl-5 pt-5 pr-5 h-0.5">
+                                    <h1 class="text-sm font-thin">
+                                        About Darain,
+                                    </h1>
+                                    <h1 class="text-xs font-thin">
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo officiis
+                                        fuga recusandae porro vero voluptatibus unde quia! Consequatur, tempore
+                                        consectetur doloremque, nostrum distinctio doloribus facere ut harum, maiores
+                                        accusantium blanditiis?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Esse omnis, dolore nam error velit reprehenderit laborum, a dolor adipisci at
+                                        molestias nisi assumenda praesentium, dignissimos sit magnam aliquid ea
+                                        necessitatibus.
+                                    </h1>
+
+                                </div>
+                            </div>
+
+
                         </div>
 
 
 
-                         <div class="relative -top-48 h-fit">
-                            <div class="p-5 h-fit w-full flex justify-center">
-                                <img src="IMAGES/darain.jpg" class="rounded-full w-48 h-48" alt="">
-                            </div>
-                            <div class="grid justify-center">
-                                <div class="flex flex-col  pb-6">
-                                    <h1 class="justify-center flex">Mohammad Darain Khan Fahim</h1>
-                                    <h1 class="text-sm font-thin flex justify-center"></h1>
-                                    <h1 class="text-sm font-thin flex justify-center">House Owner</h1>
-                                </div>
-                                <div class="border h-0.5 w-full relative left-2 opacity-20"></div>
 
-                                <div class="flex flex-col mt-10  pl-5 pb-5 pr-5">
-                                    <div class="flex justify-between">
-                                        <h1 class="text-sm mb-5">Owner's Informations: </h1>
-
-                                        <button title="Edit Informations">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mb-5">
-                                                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd" />
-                                              </svg>
-                                              
-                                        </button>
-
-                                    </div>
-
-
-                                    <div class="flex font-thin text-sm mb-2">
-                                        <h1 class="">Name: </h1>
-                                        <h1 class="justify-start flex ml-3">Mohammad Darain Khan Fahim</h1>
-                                    </div>
-                                    <div class="flex font-thin text-sm mb-2">
-                                        <h1 class="">Address: </h1>
-                                        <h1 class="justify-start flex ml-3">Mirpur DOHS</h1>
-                                    </div>
-                                    <div class="flex font-thin text-sm mb-2">
-                                        <h1 class="">City: </h1>
-                                        <h1 class="justify-start flex ml-3">Mirpur</h1>
-                                    </div>
-                                    <div class="flex font-thin text-sm mb-2">
-                                        <h1 class="">District: </h1>
-                                        <h1 class="justify-start flex ml-3">Dhaka</h1>
-                                    </div>
-                                    <div class="flex font-thin text-sm mb-2">
-                                        <h1 class="">Division: </h1>
-                                        <h1 class="justify-start flex ml-3">Dhaka</h1>
-                                    </div>
-                                    <div class="flex font-thin text-sm mb-2">
-                                        <h1 class="">House Number: </h1>
-                                        <h1 class="justify-start flex ml-3">420</h1>
-                                    </div>
-                                    
-                                    
-                                </div>
-                                <div class="border h-0.5 w- relative left-2 opacity-20"></div>
-
-                                <div>
-                                    <div class="flex flex-col pl-5 pt-5 pr-5 h-0.5">
-                                        <h1 class="text-sm font-thin">
-                                            About Darain,
-                                        </h1>
-                                        <h1 class="text-xs font-thin">
-                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo officiis fuga recusandae porro vero voluptatibus unde quia! Consequatur, tempore consectetur doloremque, nostrum distinctio doloribus facere ut harum, maiores accusantium blanditiis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse omnis, dolore nam error velit reprehenderit laborum, a dolor adipisci at molestias nisi assumenda praesentium, dignissimos sit magnam aliquid ea necessitatibus.
-                                        </h1>
-
-                                    </div>
-                                </div>
-                                
-                                
-                            </div>
-
-                          
-                            
-                            
-                         </div>
+                    </div>
 
 
 
-                         
+
                 </div>
 
 
 
             </div>
-                
-    
-                
-           
-  
 
-   
+
+
+
+
+
+
         </div>
- 
-        
+
+
 
     </div>
 
- 
 
-<!-- Chart Js -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-    const ctx = document.getElementById('myChart');
-  
-    new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
-        datasets: [{
-          label: 'Expences in months (Taka in thousand)',
-          data: [12, 19, 3, 5, 2, 3,5,7,9,10,20,42],
-          borderWidth: 1,
-          borderColor: ['rgba(103, 19, 210, 1)'],
-        backgroundColor: ['rgba(111, 90, 200, 0.69)'],
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
+
+    <!-- Chart Js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'Expences in months (Taka in thousand)',
+                    data: [12, 19, 3, 5, 2, 3, 5, 7, 9, 10, 20, 42],
+                    borderWidth: 1,
+                    borderColor: ['rgba(103, 19, 210, 1)'],
+                    backgroundColor: ['rgba(111, 90, 200, 0.69)'],
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+
+
+    <script>
+        let __js = "{{jsonn|escapejs}}";
+
+
+        let _ar = JSON.parse(__js);
+        let ar = [0, 0, 0, 0, 0];
+        for (let i = 0; i < _ar.length; i++) {
+            if (_ar[i].rate == '100') ar[0] = parseInt(_ar[i].count);
+            if (_ar[i].rate == '80') ar[1] = parseInt(_ar[i].count);
+            if (_ar[i].rate == '60') ar[2] = parseInt(_ar[i].count);
+            if (_ar[i].rate == '40') ar[3] = parseInt(_ar[i].count);
+            if (_ar[i].rate == '20') ar[4] = parseInt(_ar[i].count);
+
         }
-      }
-    });
-  </script>
+
+        console.log(ar);
+
+        const ctx1 = document.getElementById('myChart2');
+
+        new Chart(ctx1, {
+            type: 'doughnut',
+            data: {
+                labels: ['5', '4', '3', '2', '1'],
+                datasets: [{
+                    label: 'Expences in months (Taka in thousand)',
+                    data: ar,
+                    backgroundColor: [
+                        'rgba(254, 0, 103, 0.67)',
+                        'rgba(242, 0, 255, 0.8)',
+                        'rgb(127, 17, 224)',
+                        'rgba(0, 209, 254, 0.67)',
+                        'rgba(13, 0, 254, 0.67)'
+                    ],
+                    hoverOffset: 4,
+                    borderWidth: 1,
+
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
 
 
 
-<script>
-    const ctx1 = document.getElementById('myChart2');
-  
-    new Chart(ctx1, {
-      type: 'doughnut',
-      data: {
-        labels: ['5', '4', '3', '2', '1'],
-        datasets: [{
-          label: 'Expences in months (Taka in thousand)',
-          data: [50,40,12,4,10],
-          backgroundColor: [
-      'rgba(254, 0, 103, 0.67)',
-      'rgba(242, 0, 255, 0.8)',
-      'rgb(127, 17, 224)',
-      'rgba(0, 209, 254, 0.67)',
-      'rgba(13, 0, 254, 0.67)'
-    ],
-    hoverOffset: 4,
-          borderWidth: 1,
-          
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
+
+    <!-- RESPONSIVE PART STARTS FROM HERE -->
+
+    <style>
+        @media only screen and (max-width: 800px) {
+
+            #main {
+                width: 400px;
+            }
+
+            #NavAndOthers {
+                width: 800px
+            }
+
+            #navBar {
+                position: relative;
+                right: 100px;
+                width: 450px;
+            }
+
+            #revenueCards {
+                display: grid;
+
+                position: relative;
+                right: 85px;
+                width: 400px;
+
+
+            }
+
+            #FirstRevenueCard {
+                margin-left: 20px;
+                margin-bottom: 1px;
+                position: relative;
+                bottom: 30px;
+                width: 400px;
+
+            }
+
+            #SecRevenueCard {
+                position: relative;
+                bottom: 30px;
+            }
+
+            #ThirdRevenueCard {
+                position: relative;
+                bottom: 30px;
+            }
         }
-      }
-    });
-  </script>
-
-
-
-
-<!-- RESPONSIVE PART STARTS FROM HERE -->
-
-<style>
-@media only screen and (max-width: 800px) {
-
-    #main{
-        width: 400px;
-    }
-
-    #NavAndOthers{
-        width: 800px
-    }
-    
-    #navBar{
-        position: relative;
-        right: 100px;
-        width: 450px;
-    }
-    #revenueCards{
-        display:grid;
-        
-        position: relative;
-        right: 85px;
-        width: 400px;
-        
-        
-    }
-    #FirstRevenueCard{
-        margin-left: 20px;
-        margin-bottom: 1px;
-        position: relative;
-        bottom: 30px;
-        width: 400px;
-        
-    }
-    #SecRevenueCard{
-        position: relative;
-        bottom: 30px;
-    }
-    #ThirdRevenueCard{
-        position: relative;
-        bottom: 30px;
-    }
-}
-
-</style>
+    </style>
 </body>
+
 </html>

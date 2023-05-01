@@ -207,7 +207,7 @@
               </label>
               
               <input id="file" type="file" name="image" onchange="loadFile(event)"/>
-              <img src="{{ obj.image.url }}" alt="{{ obj.fname}}" id="output"
+              <img src="{% if obj.image.url != '' %}{{ obj.image.url }}{% endif %}" alt="{{ obj.fname}}" id="output"
               />
             </div>
             <div class="mt-5 flex flex-warp w-full">
@@ -279,7 +279,7 @@
                 <label for="" class="pb-4 text-xs">House Owner Number (Default)</label>
                 <input type="text"
                   class="bg-[#27273d] border border-[#3d3d5c] rounded-md h-9 w-full p-3 focus:border-[#cc208e] focus:outline-none transition-all"
-                  style="font-size: 12px; display: flex" readonly value="{{obj.phn}}" />
+                  style="font-size: 12px; display: flex" readonly value="{{obj.hown_id}}" />
               </div>
             </div>
             <div class="grid mt-5 mx-4 w-full">
@@ -460,4 +460,4 @@
 
 </html>
 
-{%endif%}
+{% endif %}

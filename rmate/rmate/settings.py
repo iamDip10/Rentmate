@@ -98,7 +98,6 @@ DATABASES = {
         }  
     }  
 }
-CSRF_TRUSTED_ORIGINS = [" https://9621-103-120-37-16.ngrok-free.app "]
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
@@ -164,8 +163,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'rentmate.message@gmail.com'
-EMAIL_HOST_PASSWORD = 'erlvnmlppuufsnkg'
+EMAIL_HOST_USER = 'rentmate.service@gmail.com'
+EMAIL_HOST_PASSWORD = 'gzbsmpldnpqhdchv'
 
 
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')

@@ -1,0 +1,365 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="/IMAGES/fevicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Noto+Sans:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,800&display=swap"
+        rel="stylesheet">
+
+
+
+    <title>Dashboard | Rentmate</title>
+</head>
+
+<style>
+    *::-webkit-scrollbar {
+        display: none;
+
+    }
+
+    input:focus {
+        outline: none;
+        transition: 0.6s;
+    }
+
+    textarea:focus {
+        outline: none;
+        transition: 0.6s;
+    }
+</style>
+
+<body class=" bg-gradient-to-r from-[#5d1961]  to-gray-900 text-white" style="font-family: 'Poppins', sans-serif;">
+    <div class="flex flex-wrap mr-2 h-screen w-full">
+        <div
+            class="bg-gradient-to-b from-[#5d1961]  to-gray-900 shadow-2xl border-r border-fuchsia-900 w-1/6 h-screen  pt-10 fixed">
+            <img src="{% static 'IMG/white 1.png' %}" alt="" class="sidebar w-40 pl-2 mr-36 ml-8 fill-white">
+
+
+            <div class="flex justify-between h-full w-full pr-16 mt-20 scale-90 shadow-sm" id="Sidebar">
+
+                <ul class="mt-5 ml-5">
+                    <li class="flex mb-7 ">
+                        <a href="{% url 'b_dash' number=num%}"
+                            class="flex scale-90 mb-5 opacity-70 hover:opacity-100 transition-all">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+                            </svg>
+                            <h1 class="ml-3">Dashboard</h1>
+                        </a>
+
+                    </li>
+                    <li class="flex pb-7">
+                        
+                        <a href="" class="flex scale-90 pb-5 opacity-70 hover:opacity-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                            </svg>
+                            <h1 class="ml-3 font-extrabold text-lg"> Complaints</h1>
+                        </a>
+
+                    </li>
+                    <li class="flex pb-7">
+                        <a href="{% url 'bpay' number=num %}" class="flex scale-90 pb-5 opacity-70 hover:opacity-100  transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <h1 class="ml-3">Payments & Bills</h1>
+                        </a>
+                    </li>
+                    <li class="flex">
+                        <a href="" class="flex"></a>
+
+                    </li>
+
+                    <li class="flex pb-7">
+                        <a href="{% url 'renters' number=num %}" class="flex scale-90 pb-5 opacity-70 hover:opacity-100 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
+                            </svg>
+
+                            <h1 class="ml-3">See All Renters</h1>
+                        </a>
+
+                    </li>
+                    <li class="flex pb-7">
+                        <a href="{% url 'houseup' number=num%}" class="flex scale-90 pb-5 opacity-70 hover:opacity-100 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                            </svg>
+                            <h1 class="ml-3">House Upgrade</h1>
+                        </a>
+                    </li>
+                    <li class="flex pb-7">
+                        <a href="{% url 'bsettings' number=num %}" class="flex scale-90 pb-5 opacity-70 hover:opacity-100 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.5 12a7.5 7.5 0 0015 0m-15 0a7.5 7.5 0 1115 0m-15 0H3m16.5 0H21m-1.5 0H12m-8.457 3.077l1.41-.513m14.095-5.13l1.41-.513M5.106 17.785l1.15-.964m11.49-9.642l1.149-.964M7.501 19.795l.75-1.3m7.5-12.99l.75-1.3m-6.063 16.658l.26-1.477m2.605-14.772l.26-1.477m0 17.726l-.26-1.477M10.698 4.614l-.26-1.477M16.5 19.794l-.75-1.299M7.5 4.205L12 12m6.894 5.785l-1.149-.964M6.256 7.178l-1.15-.964m15.352 8.864l-1.41-.513M4.954 9.435l-1.41-.514M12.002 12l-3.75 6.495" />
+                            </svg>
+
+                            <h1 class="ml-3">Settings & Privacy</h1>
+                        </a>
+                    </li>
+
+
+                    <li class="flex pb-7 pl-1 mt-16">
+                        
+                        <a href="{% url 'loout'%}" class="flex scale-90 pb-5 opacity-70 hover:opacity-100 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
+                            </svg>
+                            <h1 class="ml-3">Sign out</h1>
+                        </a>
+                    </li>
+
+
+
+                </ul>
+            </div>
+
+        </div>
+        <div class="w-5/6" id="NavAndOthers" style="margin-left: 33vh; margin-right: 2vh;">
+            <nav class=" ml-10 rounded-xl mt-10 bg-gradient-to-r from-fuchsia-900 via-oran-900 to-gray-900 border border-fuchsia-900  flex justify-between shadow-2xl"
+                id="navBar">
+
+
+
+
+
+                <div class="p-3 ">
+                    <h1 class="text-xs font-thin mb-2">Welcome,</h1>
+                    <h1 class="text-base ">{{owner.fname|add:" "|add:owner.lname}}</h1>
+                    <h1 class="text-sm font-extralight">House Owner</h1>
+                </div>
+                <div class="flex  mr-9 mt-5">
+                    <div class="ml-5 mt-2">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 opacity-80" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="ml-5 mt-2">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 opacity-80" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="ml-5">
+                        <img src="{{owner.picc.url}} " class=" w-10 h-10  rounded-full border" alt="">
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="flex flex-warp w-full" id="Main">
+                <div
+                    class="w-full bg-gradient-to-r from-fuchsia-900 via-oran-900 to-gray-900 border border-fuchsia-900 ml-10 mt-10  rounded-2xl">
+
+                    <div
+                        class="flex flex-row  bg-gradient-to-r from-[#731f78]  to-gray-800 shadow-2xl border w-full border-fuchsia-900 p-5  rounded-2xl">
+
+                        <div class="flex flex-col rounded-xl border border-fuchsia-900 m-5 p-3 shadow-xl w-1/3 ">
+                            <label for="" class="text-xs mb-1 ml-1">Sort by Date</label>
+                            <select name="" id="month" class="bg-transparent">
+                                <option value="" class="bg-gray-800 text-sm" selected>Select</option>
+                                <option value="01" class="bg-gray-800 text-sm ">January</option>
+                                <option value="02" class="bg-gray-800 text-sm ">February</option>
+                                <option value="03" class="bg-gray-800 text-sm ">March</option>
+                                <option value="04" class="bg-gray-800 text-sm ">April</option>
+                                <option value="05" class="bg-gray-800 text-sm ">May</option>
+                                <option value="06" class="bg-gray-800 text-sm ">June</option>
+                                <option value="07" class="bg-gray-800 text-sm ">July</option>
+                                <option value="08" class="bg-gray-800 text-sm ">August</option>
+                                <option value="09" class="bg-gray-800 text-sm ">September</option>
+                                <option value="10" class="bg-gray-800 text-sm ">October</option>
+                                <option value="11" class="bg-gray-800 text-sm ">November</option>
+                                <option value="12" class="bg-gray-800 text-sm ">December</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="flex flex-col rounded-xl border border-fuchsia-900 m-5 p-3 shadow-xl w-1/3 ml-11">
+                            <label for="" class="text-xs mb-1 ml-1">Sort by Appartment</label>
+                            <select name="" id="apps" class="bg-transparent">
+                                <option value="" class="bg-gray-800 text-sm" selected>Select</option>
+                                {% for a in app%}
+                                <option value="{{a.id}}" class="bg-gray-800 text-sm ">{{a.id}}</option>
+                                {% endfor %}
+                            </select>
+
+                        </div>
+
+
+
+
+
+                        <div class="flex flex-col rounded-xl border border-fuchsia-900 m-5 p-3 shadow-2xl w-1/3 ml-11">
+                            <label for="" class="text-xs mb-1 ml-1">Sort by Activity</label>
+                            <select name="" id="status" class="bg-transparent">
+
+                                <option value="" class="bg-gray-800 text-sm" selected>Select</option>
+                                <option value="Solved" class="bg-gray-800 text-sm">Solved</option>
+
+                                <option value="Not Solved" class="bg-gray-800 text-sm">Not Solved</option>
+
+                            </select>
+
+
+                        </div>
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+            <div class="flex flex-wrap w-full">
+                <div class="w-full mt-10 ml-10 p-5 bg-gradient-to-r from-[#5d1961] to-gray-900 border border-fuchsia-900 rounded-xl"
+                    id="container">
+                    <h1 class="text-white  pl-2 pt-2 tracking-wider text-sm w-fit">All Complaints List</h1>
+                    {% for comp in complain %}
+                    <div
+                        class="w-full h-fit flex flex-row bg-gradient-to-r from-fuchsia-900 to-gray-900 border border-fuchsia-900 p-3 rounded-lg mt-3">
+                        <div class="ml-3 w-1/6 flex" style="align-items: center;">
+                            <h1>{{comp.app.id}}</h1>
+                        </div>
+                        <div class="ml-3 w-1/6 flex" style="align-items: center;">
+                            <h1>{{comp.user.fname|add:" "|add:comp.user.lname}}</h1>
+                        </div>
+                        <div class="ml-3 w-1/6 flex" style="align-items: center;">
+                            <h1>{{comp.date}}</h1>
+                        </div>
+                        <div class="ml-3 w-1/6 flex" id="slv" style="align-items: center;">
+                            <h1>{{comp.slv_status}}</h1>
+                        </div>
+                        <div class="ml-3 w-1/6 flex" style="align-items: center;">
+
+                            <a href="{% url 'bcomp_solv' number=num pk=comp.pk %}" id="link"
+                                class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800">Solved</a>
+
+                        </div>
+                        <div class="ml-3 w-1/6 flex" style="align-items: center;">
+                            <h1>{{comp.prob_desc}}</h1>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script>
+        $('#month').change(function () {
+            const val = $(this).val();
+
+            $.ajax({
+                url: "{% url 'bcomp_m' number=num %}",
+                data: {
+                    'month': val,
+                },
+                success: function (data) {
+                    $('#container').html(data);
+                }
+            });
+        });
+        $('#status').change(function () {
+            const val = $(this).val();
+
+            $.ajax({
+                url: "{% url 'bcomp_s' number=num %}",
+                data: {
+                    'status': val,
+                },
+                success: function (data) {
+                    $('#container').html(data);
+                }
+            });
+        });
+        $('#apps').change(function () {
+            const val = $(this).val();
+
+            $.ajax({
+                url: "{% url 'bcomp_a' number=num %}",
+                data: {
+                    'apps': val,
+                },
+                success: function (data) {
+                    $('#container').html(data);
+                }
+            });
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>

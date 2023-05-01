@@ -1,0 +1,366 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="{%static 'IMG/fevicon.png' %}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Noto+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="starRate.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+
+    
+
+    <title>ADMIN PAYMENT | Rentmate</title>
+</head>
+
+<style>
+
+    *::-webkit-scrollbar{
+        display: none;
+
+    }
+    input:focus {
+    outline: none;
+    transition: 0.6s;
+    }
+    textarea:focus {
+    outline: none;
+    transition: 0.6s;
+    }
+    #dBoard{
+        color: #ffffff;
+
+
+    }
+
+    #dBoard:hover {
+
+  
+        text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ff4000;
+
+    }
+
+    #sidebarAnimate:hover{
+        border: #ffa200;
+        box-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ff4000;
+        
+    }
+    #text{
+        text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;
+
+    }
+    #CLS:hover{
+        box-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ff4000;
+        border-radius: 20px;
+
+    }
+    #OPN:hover{
+        text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;
+    }
+
+
+</style>
+<body class="bg-gradient-to-bl from-stone-800 via-stone-900 to-black text-white" style="font-family: 'Poppins', sans-serif;">
+    <div class="flex mr-2 h-screen w-full " >
+
+
+        <!-- Sidebar -->
+        <div class="backdrop-blur-xl shadow-2xl border-r-2 border-white border-opacity-10 backdrop-brightness-150 h-full w-0 grid p-5 fixed z-50" id="sidebarAnimate">
+            
+            
+            <div class="grid">
+                <button title="close" id="closeBtn" style="display: none;" onclick="closeSide()" class="absolute left-52">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="CLS" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                      
+                </button>
+                
+            </div>
+
+            <div>
+                <button class="relative -left-3 w-fit  rounded-full" id="openBtn" onclick="OpenSide()">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" id="OPN" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                      </svg>
+                </button>
+                  
+            </div>
+
+            <div id="elements" class="ml-1 h-screen flex flex-col w-full " style="display: none;">
+                <div class="flex flex-col w-52 mt-44 ">
+                    <img src="IMAGES/team logo white.png" alt="">
+                </div>
+
+
+                <div class="relative bottom-8" id="text">
+                    <h1 class="text-sm">ADMIN</h1>
+                    <h1 class="text-sm">DASHBOARD <br> CONTROL</h1>
+                </div>
+
+
+                <div class="grid mt-44" >
+                    <ul>
+                        <li class="text-sm mt-10  transition-all"><a href="{% url 'adminm' %}" id="dBoard"> Dashboard</a></li>
+                        <li class="text-sm mt-10 opacity-60 hover:opacity-100 transition-all"><a href="{% url 'adminp' %}" id="dBoard"> Payments & Bills</a></li>
+                        
+                        <li class="text-sm mt-10 opacity-60 hover:opacity-100 transition-all"><a href="{% url 'admins' %}" id="dBoard"> Settings and Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+        <div class="flex flex-col h-screen w-full ml-20 overflow-scroll">
+
+            <div class="mb-2 ">
+                <div class="flex mt-20 ">
+                    <img src="IMAGES/darain.jpg" class="w-16 h-16   border-orange-400 rounded-full "  alt="">
+    
+                    <div class="grid h-fit relative top-5 left-2">
+                        <h1 class="text-xs">Welcome,</h1>
+                        <h1 class="text-sm" style=" text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;">Mohammad Darain Khan Fahim</h1>
+                    </div>
+                </div>
+    
+                <div class="mt-10">
+    
+                    <div class="grid">
+                        <h1  class="text-8xl tracking-wider font-extrabold" style=" text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;">TEAM ENCRYPTED COPS</h1>
+                        <h1 class="text-sm tracking tracking-widest">ADMIN SETTINGS SECTION</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-warp h-screen w-full mt-20 mb-10 ">
+                <div class=" mr-5 mt-7 p-4 pt-7 bg-transparent border border-orange-700 rounded-xl drop-shadow-xl  w-1/3 pb-4 h-fit " style=" text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;">
+                    <!-- <h1 class="text-lg relative -top-20 ">PROFILE SECURITY SETTINGS</h1> -->
+            
+                    <h1 class="text-base ">Change Password</h1>
+                    <h1 class="text-xs ">It is better to change password after a certain time</h1>
+            
+                    <div class="" style=" text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;">
+                        <form action="">
+            
+                            <div class="mt-10" >
+                                <label for="" class="pb-4 text-xs">Old Password</label>
+                                <div class="flex ">
+                                    <input type="password" id="pass" class="bg-[#27273d] border border-[#3d3d5c] w-full rounded-md h-9  p-3 focus:border-orange-700 focus:outline-none transition-all" style="font-size: 12px;" >
+            
+            
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 relative -left-10 top-2 " onclick="showPass()">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                      </svg>
+                                </div>
+                                  
+                            </div>
+            
+                            <div class="mt-5">
+                                <label for="" class="pb-4 text-xs">New Password</label>
+                                <div class="flex ">
+                                    <input type="password" id="pass" class="bg-[#27273d] border border-[#3d3d5c] w-full rounded-md h-9  p-3 focus:border-orange-700 focus:outline-none transition-all" style="font-size: 12px;" >
+            
+            
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 relative -left-10 top-2 " onclick="showPassNew()">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                      </svg>
+                                </div>
+                                  
+                            </div>
+            
+            
+                            <div class="mt-5">
+                                <label for="" class="pb-4 text-xs">Re-Type New Password</label>
+                                <div class="flex ">
+                                    <input type="password" id="pass" class="bg-[#27273d] border border-transparent w-full rounded-md h-9  p-3 focus:border-orange-700  focus:outline-none transition-all" style="font-size: 12px;" >
+            
+            
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 relative -left-10 top-2 " onclick="showPass()">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                      </svg>
+                                </div>
+                                  
+                            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                        </form>
+                    </div>
+                </div>
+
+                <div class="ml-10 mr-5 mt-7 p-4 pt-7 bg-transparent border border-orange-700 rounded-xl drop-shadow-xl  w-full  pb-4 overflow-scroll " style="height: 350px;" style=" text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;">
+                    <h1 class="">Your Login Activity</h1><br>
+                    <div class="text-sm" style=" text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;">
+                        <div class="bg-lime-400 p-2 rounded-xl border border-lime-500 bg-opacity-60 mb-5">
+                        <h1> Active Session: </h1><br>
+                        <h1> Device: Macbook Air M1 </h1>
+                        <h1> Elapsed Time: 10 hours</h1>
+                        <h1> Logged in at: 14-02-2023</h1>
+                    </div>
+            
+                    <div>
+                        <h1>Other Activity:</h1><br>
+            
+                        <div class="mb-5 bg-yellow-500 p-2 rounded-xl border border-yellow-500 bg-opacity-60">
+                            <h1> Device: Macbook Air M1 </h1>
+                            <h1> Elapsed Time: 10 hours</h1>
+                            <h1> Logged in at: 14-02-2023</h1>
+                        </div>
+            
+                        <div class="bg-yellow-500 p-2 rounded-xl border border-yellow-500 bg-opacity-60 mb-5">
+                            <h1> Device: Macbook Air M1 </h1>
+                            <h1> Elapsed Time: 10 hours</h1>
+                            <h1> Logged in at: 14-02-2023</h1>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+
+
+                
+            </div>
+            <div class=" mr-24 mt-7 p-4 pt-7 bg-transparent rounded-xl drop-shadow-xl h-80  w-full pb-4 border border-orange-600" style="font-family: 'Poppins', sans-serif;" style=" text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;">
+                <div class="flex justify-between" style=" text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;">
+                    <div class="">
+                        <h1 class="text-md">Security Status</h1>
+                        <h1 class="text-xl text-white  pb-1">Hooray! You are secured!</h1>
+                        <div class="border-b-2" id="line">
+            
+                        </div>
+            
+            
+                        <ul class="mt-20 text-sm">
+                            <li class="pb-2">
+                                <div class="flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-green-500">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                      </svg><h1 class="px-2 font-light">Your password is strong
+                                      </h1>
+                                      
+                                      
+                                </div>
+                            </li>
+            
+                            <li class="pb-2">
+                                <div class="flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-green-500">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                      </svg><h1 class="px-2 font-light">Two Factor Authentication has turned on
+                                      </h1>
+                                      
+                                      
+                                </div>
+                            </li>
+            
+                            <li class="pb-2">
+                                <div class="flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-green-500">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                      </svg><h1 class="px-2 font-light">No unauthorized logins
+                                      </h1>
+                                      
+                                      
+                                </div>
+                            </li>
+                        </ul>
+                        
+            </div>
+            
+
+
+
+            <div class=" backdrop-blur-xl shadow-2xl">
+                
+                
+                
+            </div>
+
+
+
+
+            
+        </div>
+
+ 
+        
+
+    </div>
+
+
+    <script>
+
+        function OpenSide(){
+            document.getElementById("sidebarAnimate").style.width="16rem";
+            document.getElementById("elements").style.display="block";
+            document.getElementById("closeBtn").style.display="block";
+            document.getElementById("openBtn").style.display = "none";
+
+            
+        }
+
+        function closeSide(){
+            
+            document.getElementById("sidebarAnimate").style.width="0px";
+            document.getElementById("elements").style.display="none";
+            document.getElementById("openBtn").style.display = "block";
+            document.getElementById("closeBtn").style.display="none";
+            
+        }
+
+
+
+
+
+    function showPass(){
+        var x = document.getElementById("pass");
+        if(x.type == "password"){
+            x.type = "text";
+        }else{
+            x.type = "password";
+        }
+    }
+
+
+
+        
+    </script>
+
+
+</body>
+</html>

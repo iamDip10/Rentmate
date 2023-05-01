@@ -1,0 +1,432 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+
+    <link rel="icon" type="image/x-icon" href="{% static 'IMG/fevicon.png'%}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Noto+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,800&display=swap" rel="stylesheet">
+    <title>Rentmate - Home</title>
+    <link rel="stylesheet" href="{% static 'CSS/sheet.css'%}">
+    <link rel="stylesheet" href="{% static 'CSS/slider.css' %}">
+
+
+  </head>
+  <body>
+    <div class="splash-screen">
+        <div class="loading-bar"></div>
+        <div class="logo-pulse">
+          <img src="{% static 'IMG/white.png' %}" alt="Logo">
+        </div>
+      </div>
+      
+
+    <div class="grid">
+        <video autoplay muted loop id="v0" class="bgv">
+            <source src="{% static 'VIDEOS/bgvidnew.mp4' %}" type="video/mp4">
+
+        </video>
+
+
+      <div class="z-50 relative w-full h-full grid ">
+            <nav class="w-5/6 bg-gray-100 flex justify-between bg-opacity-5 rounded-3xl p-1 pl-2 relative top-5 left-40">
+          <img src="{% static 'IMG/white 1.png' %}" alt="" class="w-24 ">
+
+          <div class="flex ml-3 mt-3 mr-8">
+            <ul class="flex text-white">
+                <li class="ml-2 "><a href="">Home</a></li>
+                <li class="ml-8"><a href="aboutUs.html">About Us</a></li>
+                <li class="ml-8"><a href="aboutUs.html">Login</a></li>
+            </ul>
+          </div>
+        </nav>
+
+
+        <div class="grid justify-center mt-80">
+
+          <h1 class="divToFade font-extrabold animate-pulse text-white cursor-default" style="font-size: 180px;" id="title">RENTMATE</h1>
+=
+
+          <div class=" border p-5 mb-56 rounded-xl border-white w-full bg-white bg-opacity-10">
+            <h1 class="text-white mb-5 text-sm tracking tracking-wider">SEARCH YOUR FAMILY RESIDENCE OR MESS</h1>
+            <form action="{% url 'search' %}" class="grid w-full" >
+
+              <div class="w-full flex">
+                <div class="grid w-full ">
+                  <h1 class="text-xs text-white pb-2">House Type</h1>
+                  <select name="" id="" class="bg-gray-950 w-full border border-white  text-white p-1 rounded-lg hover:rounded-xl transition-all">
+                    <option value="Family" class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all">Family</option>
+                    <option value="Mess" class="bg-gray-950 border border-white  text-white p-1 rounded-lg hover:rounded-xl transition-all">Mess</option>
+                  </select>
+  
+                  
+                </div>
+  
+                <div class="grid w-full ml-5">
+                  <h1 class="text-xs text-white pb-2">Select District</h1>
+                  <select name="" id="" class=" bg-gray-950 border border-white  text-white p-1 rounded-lg hover:rounded-xl transition-all">
+                    <option value="Family" class="border border-white bg-transparent text-white p-1 rounded-lg hover:rounded-xl transition-all">Family</option>
+                    <option value="Mess" class=" bg-gray-950 border border-white  text-white p-1 rounded-lg hover:rounded-xl transition-all">Mess</option>
+                  </select>
+  
+                  
+                </div>
+                <div class="grid w-full ml-5">
+                  <h1 class="text-xs text-white pb-2 ">Select Division</h1>
+                  <select name="" id="" class=" bg-gray-950 border border-white text-white p-1 rounded-lg hover:rounded-xl transition-all">
+                    <option disabled selected> Division</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900 white  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Barishal">Barishal</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Chattogram">Chattogram</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Dhaka">Dhaka</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Khulna">Khulna</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Mymensingh">Mymensingh</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Rajshahi">Rajshahi</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Rangpur">Rangpur</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Sylhet">Sylhet</option>
+                  </select>
+                </div>
+                <div class="grid w-full ml-5">
+                  <h1 class="text-xs text-white pb-2">Select District</h1>
+                  <select name="" id="" class=" bg-gray-950 border border-whitw  text-white p-1 rounded-lg hover:rounded-xl transition-all">
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Bagerhat">Bagerhat</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Bandarban">Bandarban</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Barguna">Barguna</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Barisal">Barisal</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Bhola">Bhola</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Bogra">Bogra</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Brahmanbaria">Brahmanbaria</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Chandpur">Chandpur</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Chittagong">Chittagong</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Chuadanga">Chuadanga</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Comilla">Comilla</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Cox'sBazar">Cox'sBazar</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Dhaka">Dhaka</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Dinajpur">Dinajpur</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Faridpur">Faridpur</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Feni">Feni</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Gaibandha">Gaibandha</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Gazipur">Gazipur</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Gopalganj">Gopalganj</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Habiganj">Habiganj</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Jaipurhat">Jaipurhat</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Jamalpur">Jamalpur</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Jessore">Jessore</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Jhalokati">Jhalokati</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Jhenaidah">Jhenaidah</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Khagrachari">Khagrachari</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Khulna">Khulna</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Kishoreganj">Kishoreganj</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Kurigram">Kurigram</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Kushtia">Kushtia</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Lakshmipur">Lakshmipur</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Lalmonirhat">Lalmonirhat</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Madaripur">Madaripur</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Magura">Magura</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Manikganj">Manikganj</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Maulvibazar">Maulvibazar</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Meherpur">Meherpur</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Munshiganj">Munshiganj</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Mymensingh">Mymensingh</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Naogaon">Naogaon</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Narail">Narail</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Narayanganj">Narayanganj</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Narsingdi">Narsingdi</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Natore">Natore</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Nawabganj">Nawabganj</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Netrokona">Netrokona</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Nilphamari">Nilphamari</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Noakhali">Noakhali</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Pabna">Pabna</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Panchagarh">Panchagarh</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Patuakhali">Patuakhali</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Pirojpur">Pirojpur</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Rajbari">Rajbari</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Rajshahi">Rajshahi</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Rangamati">Rangamati</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Rangpur">Rangpur</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Satkhira">Satkhira</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Shariatpur">Shariatpur</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Sherpur">Sherpur</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Sirajganj">Sirajganj</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Sunamganj">Sunamganj</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Sylhet">Sylhet</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Tangail">Tangail</option>
+                    <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Thakurgaon">Thakurgaon</option>
+                  </select>
+  
+  
+                  
+                </div>
+              </div>
+
+              <button type="submit" class="text-white border rounded-md hover:rounded-tl-3xl hover:rounded-br-3xl hover:scale-110 p-2 hover:bg-fuchsia-600 transition-all w-44  relative left-96 mt-5 border-fuchsia-900">Search House</button>
+
+
+            </form>
+          </div>
+
+
+
+
+        </div>
+
+
+
+        <div class="grid">
+            <div class="mt-5 w-full h-fit" style="position: relative; " >
+                <div class=" relative opacity-0 top-24 bg-white w-fit pr-52 pt-10 pb-20 pl-5" id="bg">
+                  <div id="firstTitle" class="opacity-0 w-fit flex">
+                      <div class="line" id="line" style="  border-left: 2px solid black;
+                      height: 300px;"></div>
+      
+                      <div id="firstTitle" class="w-1/2  p-2">
+                          <h1 class=" relative top-8 left-1.5 tracking-widest text-sm font-extralight">WHAT IS </h1>
+                          <h1 class="font-extrabold w-fit cursor-default" style="font-size: 80px;">RENTMATE</h1>
+                          <h1 class="text-xs ">Rentmate is an online platform that connects landlords and renters, offering a range of services to make the house rental process easy and hassle-free. <br> The website offers a user-friendly interface that allows renters to search for properties based on their specific needs and landlords to list their properties and manage inquiries.br Rentmate offers a range of search options that allow users to filter properties by location, price range, property type, and other key criteria. The platform also offers tools for landlords to manage their rental listings and inquiries, as well as resources to help renters and landlords navigate the rental process. Rentmate's focus on transparency and social media integration make it easy for users to share properties and connect with the right people. Whether you're a landlord or a renter, Rentmate has everything you need to find your next rental property or manage your rental listings with ease.</h1>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div id="secTitle" class=" w-fit flex justify-end ">
+                        
+        
+                        <div id="secTitle" class="w-1/2 p-5">
+
+                            <div class="flex justify-end">
+                                <h1 class=" relative top-5 left-1.5 tracking-widest text-sm font-bold text-red-500 text-right" style="font-size: 60px;">WHY </h1>
+                                <h1 class=" relative top-8  tracking-widest text-sm font-extralight text-right">WE NEED </h1>
+                            </div>
+                            <h1 class="font-extrabold  cursor-default text-right" style="font-size: 80px;">RENTMATE</h1>
+                            <h1 class="text-xs text-right">Rentmate is a house rental website that offers a range of features and benefits for both tenants and landlords. One of the key reasons to use Rentmate is its convenient property search function, which allows users to easily find rental properties that meet their specific requirements. The website also offers detailed property listings that provide users with all the necessary information about the rental property, including photos, descriptions, amenities, and pricing.
+
+                                In addition, Rentmate offers secure online payment options for rental deposits and monthly rent payments, making it convenient for tenants to pay their rent without having to physically go to the rental office. The website also offers tenant screening services to landlords, which includes credit checks, background checks, and rental history checks. This helps landlords to make informed decisions when selecting tenants for their properties.
+                                
+                                Rentmate also offers a platform for tenants to easily submit maintenance requests for their rental properties, ensuring that maintenance issues are quickly addressed and resolved. Finally, the website offers a landlord dashboard where property owners can manage their rental properties, view tenant information, and receive rental payments.
+                                
+                                Overall, Rentmate offers a convenient and reliable platform for tenants and landlords to find and manage rental properties. It streamlines the rental process and helps to ensure that both parties have a positive rental experience.</h1>
+                        </div>
+
+                          <div class="line" id="line" style="  border-right: 2px solid black;
+                        height: 300px;"></div>
+  
+                    </div>
+
+                     
+                  
+                </div>
+            </div>
+
+
+            <div class="w-full mb-64" style="margin-top: 500px;">
+                <div class="w-full grid justify-center">
+                    <h1 class="font-extrabold w-full text-white cursor-default border-b-2" style="font-size: 80px;">Features</h1>
+                </div>
+
+
+
+
+
+
+                <div class="">
+                    <div class="w-full mt-20">
+
+
+
+
+                        <div class="grid w-1/2 bg-white mt-10 bg-opacity-40"  style="background-image: url('IMAGES/person.png');background-size:900px; background-position-y: center; background-position-x:  -190px; background-repeat: no-repeat; background-blend-mode: multiply; " id="f1">
+                            <div class=" w-96 relative ml-48 left-1/3 p-5 mt-8 justify-center text-white scale-75">
+                                <h1 class="font-extrabold  cursor-default " style="font-size: 50px;">EASY TO USE</h1>
+                                <h1 class="text-xs ">
+                                    Simple search: Rentmate has a simple and intuitive search feature that makes it easy to find the right property. Users can search by location, price range, number of bedrooms, and other key features. <br><br>
+        
+                                    Detailed property listings: Each property listing on Rentmate includes detailed information about the property, including photos, amenities, and a detailed description. <br>   <br>
+        
+                                    Online booking: Rentmate makes it easy to book a property online. Users can view availability calendars and book a property with just a few clicks. <br> <br>
+        
+                                    Secure payments: Rentmate offers secure online payments, making it easy to pay for a rental property without worrying about fraud or other security issues. <br><br>
+        
+                                    Customer support: Rentmate provides excellent customer support to help renters with any questions or issues they may have. Users can contact Rentmate by phone, email, or chat.
+                                </h1>
+                            </div>
+                        </div>
+                        
+    
+    
+    
+    
+                    </div>
+    
+                    <div class="w-full mt-20 grid justify-end">
+    
+    
+    
+    
+                        <div class="grid justify-end w-full bg-opacity-40 bg-white mt-10 p-2" style="background-image: url('IMAGES/key.png'); background-repeat: no-repeat; background-blend-mode: multiply; " id="f2">
+                            <div class="w-1/2 p-5 mt-8 flex relative left-96 ml-32" >
+                                <div class="grid scale-75 text-white">
+                                    <h1 class="font-extrabold text-red-500 cursor-default  " style="font-size: 50px;">STRONG SECURITY </h1>
+                                <h1 class="text-xs ">
+                                    Secure website: Rentmate uses HTTPS encryption, which means that all communications between users and the website are encrypted and secure. <br><br>
+    
+                                    Secure payment processing: Rentmate uses a third-party payment processor that is certified as PCI-DSS compliant, which means that it meets strict security standards for processing credit card information.<br><br>
+    
+                                    User authentication: Rentmate requires users to create an account and log in to access certain features, which helps to prevent unauthorized access to user information.<br><br>
+    
+                                    Two-factor authentication: Rentmate offers two-factor authentication for added security, which requires users to provide a second form of authentication (such as a code sent to their phone) in addition to their password.<br><br>
+    
+                                    Privacy policy: Rentmate has a detailed privacy policy that outlines how user information is collected, stored, and used, and ensures that user information is not shared with third parties without user consent.
+                                </h1>
+                                </div>
+                                <!-- <div class="">
+                                    <img src="IMAGES/key.png" class=" scale-150 relative top-6 left-44 opacity-20" alt="">
+                                </div> -->
+                            </div>
+                        </div>
+                        
+    
+    
+    
+    
+                    </div>
+    
+    
+                    <div class="w-full mt-28">
+    
+    
+    
+    
+                        <div class="grid w-1/2 bg-opacity-40 bg-white mt-10"  style="background-image: url('IMAGES/bangladeshi-taka-sign.png');background-size:500px; background-position-y: center; background-position-x:  -10px; background-repeat: no-repeat; background-blend-mode: multiply; " id="f3">
+                            <div class=" w-96 relative ml-48 left-1/3 p-5 mt-8 justify-center scale-75">
+                                <h1 class="font-extrabold  cursor-default text-green-500" style="font-size: 50px;">EASY TRANSACTION</h1>
+                                <h1 class="text-xs text-white">
+                                    Simple search: Rentmate has a simple and intuitive search feature that makes it easy to find the right property. Users can search by location, price range, number of bedrooms, and other key features. <br><br>
+        
+                                    Detailed property listings: Each property listing on Rentmate includes detailed information about the property, including photos, amenities, and a detailed description. <br>   <br>
+        
+                                    Online booking: Rentmate makes it easy to book a property online. Users can view availability calendars and book a property with just a few clicks. <br> <br>
+        
+                                    Secure payments: Rentmate offers secure online payments, making it easy to pay for a rental property without worrying about fraud or other security issues. <br><br>
+        
+                                    Customer support: Rentmate provides excellent customer support to help renters with any questions or issues they may have. Users can contact Rentmate by phone, email, or chat.
+                                </h1>
+                            </div>
+                        </div>
+                        
+    
+    
+    
+    
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+                  
+                  
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+    
+
+    <footer class="bg-[#131313] border-t grid px-20 pt-20 pb-20 ">
+        <div class="flex justify-center scale-75">
+            <div class="flex border-r-2 pr-72 border-stone-500">
+                <img src='IMAGES/white.png' alt="" srcset="" class="w-60 h-44 absolute">
+            </div>
+            <div class="grid px-20 pr-72 border-stone-500 border-r-2">
+    
+                <h1 class="text-white text-2xl opacity-90">Contact With Us</h1>br
+                <h1 class="text-white text-lgmd opacity-90">Address:</h1>
+                <p class="text-white text-md opacity-70">United City, Madani Avenue, <br>
+                    Badda, Dhaka - 1212, Bangladesh.</p><br>
+    
+                    <h1 class="text-white text-xl opacity-90">Call:</h1>
+                <p class="text-white text-md opacity-70">+8801712950127, <br>
+                    +8801810046480</p><br>
+    
+                    <h1 class="text-white text-xl opacity-90">Email:</h1>
+                    <p class="text-white text-md opacity-70">mkhan203010@gmail.com <br>
+                        </p>
+    
+    
+            </div>
+
+            <div class="grid px-10 ">
+                <h1 class="text-white text-xl pl-5 opacity-90">Find Us on Social Platforms</h1>
+                <div class="flex ">
+                <a href="https://www.facebook.com/mdk.fahim/" class="pl-5"><img src='IMAGES/icons8-facebook-50.png' alt="" ></a>
+                <a href="https://www.facebook.com/iamDip" class="pl-5"><img src='IMAGES/icons8-instagram-50.png ' alt="" ></a>
+                </div>
+            </div>
+
+        </div >
+        
+        <div class="grid justify-center relative top-12">
+            <img src="{% static 'IMG/team logo white.png' %}" alt="" srcset="" class="w-60">
+            <p class="text-white opacity-60">All Right Reserved Team Encrypted Cops</p>
+        </div>
+
+    </footer>
+
+
+    <script type="module" src="{% static 'CSS/main.js' %}"></script>
+
+
+    <!-- <script>
+      document.getElementById("firstTitle").addEventListener("wheel", scrollDo);
+
+
+      function scrollDo(){
+        this.style.display = "block";
+      }
+    </script> -->
+
+
+    
+  </body>
+</html>

@@ -1,0 +1,496 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="/IMAGES/fevicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Noto+Sans:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,800&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'CSS/starRate.css' %}">
+
+
+    <title>Dashboard | Rentmate</title>
+</head>
+
+<style>
+    *::-webkit-scrollbar {
+        display: none;
+
+    }
+
+    input:focus {
+        outline: none;
+        transition: 0.6s;
+    }
+
+    textarea:focus {
+        outline: none;
+        transition: 0.6s;
+    }
+
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        padding: 0.15rem;
+    }
+
+
+
+
+    input[name="star"] {
+        display: inline-block;
+        width: 0;
+        opacity: 0;
+        margin-left: -2px;
+    }
+
+    /* hide source svg */
+
+    .star-source {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+
+
+
+
+    .star {
+        color: transparent;
+        transition: color 0.2s ease-in-out;
+    }
+
+
+    .star-container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    label:hover~label .star,
+    svg.star:hover,
+    input[name="star"]:focus~label .star,
+    input[name="star"]:checked~label .star {
+        color: #d62a9d;
+    }
+
+    input[name="star"]:checked+label .star {
+        animation: starred 0.5s;
+    }
+
+    input[name="star"]:checked+label {
+        animation: scaleup 1s;
+    }
+
+    @keyframes scaleup {
+        from {
+            transform: scale(1.2);
+        }
+
+        to {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes starred {
+        from {
+            color: #600040;
+        }
+
+        to {
+            color: #d62a9d;
+        }
+    }
+
+    /* Button */
+</style>
+
+<body class=" bg-gradient-to-r from-[#5d1961]  to-gray-900 text-white" style="font-family: 'Poppins', sans-serif;">
+    <div class="flex flex-wrap mr-2 h-screen w-full">
+        <div
+            class="bg-gradient-to-b from-[#5d1961]  to-gray-900 shadow-2xl border-r border-fuchsia-900 w-1/6 h-screen  pt-10 fixed">
+            <div class="">
+                <img src="{% static 'IMG/white 1.png' %}" alt="" class="sidebar w-40 pl-2 mr-36 ml-8 fill-white">
+
+            </div>
+
+
+            <div class="flex justify-between h-full w-full pr-16 mt-20 scale-90 shadow-sm" id="Sidebar">
+
+                <ul class="mt-5 ml-5">
+                    <li class="flex mb-7 ">
+                        <a href="{% url 'b_dash' number=num %}"
+                            class="flex scale-90 mb-5 opacity-70 hover:opacity-100 transition-all">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+                            </svg>
+                            <h1 class="ml-3">Dashboard</h1>
+                        </a>
+
+                    </li>
+                    <li class="flex pb-7">
+                        <a href="{% url 'bcomp' number=num%}"
+                            class="flex scale-90 mb-5 opacity-70 hover:opacity-100 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                            </svg>
+                            <h1 class="ml-3"> Complaints</h1>
+                        </a>
+
+                    </li>
+                    <li class="flex pb-7">
+                        <a href="{% url 'bpay' number=num%}"
+                            class="flex scale-90 mb-5 opacity-70 hover:opacity-100 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <h1 class="ml-3">Payments & Bills</h1>
+                        </a>
+                    </li>
+                    <li class="flex">
+                        <a href="" class="flex"></a>
+
+                    </li>
+
+                    <li class="flex pb-7">
+                        <a href="" class="flex scale-90 mb-5 opacity-70 hover:opacity-100 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
+                            </svg>
+
+                            <h1 class="ml-3 font-extrabold text-lg">See All Renters</h1>
+                        </a>
+
+                    </li>
+                    <li class="flex pb-7">
+                        <a href="{% url 'houseup' number=num%}" class="flex scale-90 mb-5 opacity-70 hover:opacity-100 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                            </svg>
+                            <h1 class="ml-3">House Upgrade</h1>
+                        </a>
+                    </li>
+                    <li class="flex pb-7">
+                        <a href="{% url 'bsettings' number=num %}" class="flex scale-90 mb-5 opacity-70 hover:opacity-100 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.5 12a7.5 7.5 0 0015 0m-15 0a7.5 7.5 0 1115 0m-15 0H3m16.5 0H21m-1.5 0H12m-8.457 3.077l1.41-.513m14.095-5.13l1.41-.513M5.106 17.785l1.15-.964m11.49-9.642l1.149-.964M7.501 19.795l.75-1.3m7.5-12.99l.75-1.3m-6.063 16.658l.26-1.477m2.605-14.772l.26-1.477m0 17.726l-.26-1.477M10.698 4.614l-.26-1.477M16.5 19.794l-.75-1.299M7.5 4.205L12 12m6.894 5.785l-1.149-.964M6.256 7.178l-1.15-.964m15.352 8.864l-1.41-.513M4.954 9.435l-1.41-.514M12.002 12l-3.75 6.495" />
+                            </svg>
+
+                            <h1 class="ml-3">Settings & Privacy</h1>
+                        </a>
+                    </li>
+
+
+                    <li class="flex pb-7 pl-1 mt-16">
+                        <a href="{% url 'loout'%}" class="flex scale-90 mb-5 opacity-70 hover:opacity-100 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
+                            </svg>
+                            <h1 class="ml-3">Sign out</h1>
+                        </a>
+                    </li>
+
+
+
+                </ul>
+            </div>
+
+        </div>
+        <div class="w-5/6 ml-80" id="NavAndOthers" style="margin-left: 33vh; margin-right: 2vh;">
+            <nav class=" ml-10 rounded-xl mt-10 bg-gradient-to-r from-fuchsia-900 via-oran-900 to-gray-900 border border-fuchsia-900  flex justify-between shadow-2xl"
+                id="navBar">
+
+
+
+
+
+                <div class="p-3 ">
+                    <h1 class="text-xs font-thin mb-2">Welcome,</h1>
+                    <h1 class="text-base ">{{owner.fname|add:" "|add:owner.lname}}</h1>
+                    <h1 class="text-sm font-extralight">House Owner</h1>
+                </div>
+                <div class="flex  mr-9 mt-5">
+                    <div class="ml-5 mt-2">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 opacity-80" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="ml-5 mt-2">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 opacity-80" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="ml-5">
+                        <img src="{{owner.picc.url}}  " class=" w-10 h-10  rounded-full border" alt="">
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="flex flex-wrap w-full" id="Main">
+                <div
+                    class=" bg-gradient-to-r from-fuchsia-900 via-oran-900 to-gray-900 border border-fuchsia-900 ml-10 mt-10 w-full  rounded-2xl">
+
+
+                    <div
+                        class="grid bg-gradient-to-r from-[#731f78]  to-gray-800 shadow-2xl border w-full border-fuchsia-900 p-5  rounded-2xl">
+
+                        <h1 class="relative left-8">Assign Bills</h1>
+                        <h1 class="relative left-8 text-xs tracking-wider font-extralight">Upload pdf file of bills</h1>
+                        <div class="flex flex-warp w-full">
+                            <form action="{% url 'storein' number=num%}" enctype="multipart/form-data" method="POST"
+                                class="flex w-full h-fit">
+                                {% csrf_token %}
+                                <div
+                                    class="flex flex-col rounded-xl border border-fuchsia-900 m-5 p-3 shadow-xl w-1/5 ">
+                                    <label for="mm" class="text-sm font-medium mb-1 ml-1">Select Month</label>
+                                    <select name="month_select" id="mm" class=" mt-4 bg-transparent">
+                                        <option value="" class="bg-gray-800 text-sm ">Select</option>
+                                        <option value="January" class="bg-gray-800 text-sm ">January</option>
+                                        <option value="February" class="bg-gray-800 text-sm ">February</option>
+                                        <option value="March" class="bg-gray-800 text-sm ">March</option>
+                                        <option value="April" class="bg-gray-800 text-sm ">April</option>
+                                        <option value="May" class="bg-gray-800 text-sm ">May</option>
+                                        <option value="June" class="bg-gray-800 text-sm ">June</option>
+                                        <option value="July" class="bg-gray-800 text-sm ">July</option>
+                                        <option value="August" class="bg-gray-800 text-sm ">August</option>
+                                        <option value="September" class="bg-gray-800 text-sm ">September</option>
+                                        <option value="October" class="bg-gray-800 text-sm ">October</option>
+                                        <option value="November" class="bg-gray-800 text-sm ">November</option>
+                                        <option value="December" class="bg-gray-800 text-sm ">December</option>
+
+
+                                    </select>
+
+                                </div>
+
+
+                                <div
+                                    class="flex flex-col rounded-xl border border-fuchsia-900 m-5 p-3 shadow-xl w-1/5 ml-11">
+                                    <label for="" class="text-sm font-medium mb-1 ml-1">Select Residants</label>
+                                    <select name="res" id="" class="mt-4 bg-transparent">
+                                        <option value="" class="bg-gray-800 text-sm ">Select</option>
+                                        {% for app in res %}
+                                            <option value="{{app.phn}}" class="bg-gray-800 text-sm ">{{app.fname|add:" "|add:app.lname}}</option>
+                                        {%endfor%}
+                                    </select>
+
+                                </div>
+
+                                <div
+                                    class="flex flex-col rounded-xl border border-fuchsia-900 m-5 p-3 shadow-xl w-1/5 ml-11">
+                                    <div>
+                                        <label for="first_name"
+                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Enter
+                                            amount</label>
+                                        <input type="text" id="first_name"
+                                            class="bg-fuchsia-800 border border-fuchsia-800 text-white text-sm rounded-lg focus:ring-fuchsia-800 focus:border-fuchsia-800 block w-full p-2.5 dark:bg-fuchsia-800 dark:border-fuchsia-900 dark:placeholder-white dark:text-white dark:focus:fuchsia-500 dark:focus:border-fuchsia-600"
+                                            placeholder="Amount" name="amount" required>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="flex flex-col rounded-xl border border-fuchsia-900 m-5 p-3 shadow-xl w-1/5 ml-11">
+
+                                    <label class="block mb-2 text-sm font-medium  text-white"
+                                        for="multiple_files">Upload PDF Here</label>
+                                    <input class="block w-full text-sm text-white mt-3 border border-none rounded-lg cursor-pointer file:rounded-md file:border-0
+                                        file:text-sm
+                                        file:bg-fuchsia-700 file:text-white
+                                        hover:file:bg-fuchsia-600" id="multiple_files" type="file" name="filename">
+
+
+                                </div>
+
+
+                                <div class="flex flex-col rounded-xl  m-5 shadow-2xl w-1/6 ml-11">
+                                    <input type="submit"
+                                        class="border border-fuchsia-900 rounded-xl w-full p-1  hover:rounded-xl hover:border-fuchsia-500 transition-all delay-75 h-full hover:bg-fuchsia-700 "
+                                        value="Upload">
+
+
+
+                                </div>
+                            </form>
+
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+            <div class=" mt-10 ml-10 flex flex-row ">
+
+                <div
+                    class="p-5 bg-gradient-to-r from-[#5d1961] flex flex-col w-1/3 mr-8 to-gray-900 border border-fuchsia-900 rounded-xl">
+                    <h1 class="text-white  pl-2 pt-2 tracking-wider  text-sm w-fit">All Renters</h1>
+                    <div class="mx-2" id="contain">
+                        
+                    </div>
+                </div>
+                <div
+                    class="p-5 bg-gradient-to-r from-[#5d1961] flex flex-col w-2/3 h-fit to-gray-900 border border-fuchsia-900 rounded-xl">
+                    <h1>List of renters who have completed there payment of current month</h1>
+
+                    {% for pay in paycomplt%}
+                    <div class="p-5 flex w-full mt-5 items-center hover:bg-gradient-to-r from-[#5d1961] to-gray-800  rounded-2xl shadow-2xl">
+                        <div>
+
+                            <img style="object-fit: cover; width: 90px; height: 90px;" class="rounded-full mr-8" src="{{pay.user.image.url}}" alt="No image">
+                        </div>
+                        <h1 class="ml-3 mr-5 text-xl w-1/4">{{pay.user.fname|add:" "|add:pay.user.lname}}</h1>
+                        <h1 class="text-xl w-3/4"> has completed {% if pay.user.gender == "Male" %} his {%else%} her {%endif%} payment on {{pay.date|slice:"-2:"|add:" "|add:pay.month}}</h1>
+                    
+                        
+                    </div>
+                    {%endfor%}
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script>
+        const show = document.getElementById("contain");
+
+        let js = JSON.parse("{{apps|escapejs}}");
+        console.log(js[0].image);
+        var fo_id ={} ;
+        for (var i = 0; i < js.length; i++) {
+            const divv = document.createElement("div");
+
+            divv.classList.add('rents');
+            divv.innerHTML = `<div class="flex w-full mt-5 items-center hover:bg-gradient-to-r from-[#5d1961] to-gray-800  rounded-2xl">
+                <img style="object-fit: cover; height: 100px; width:100px" class="rounded-full" src="/media/${js[i].image}" alt="${js[i].image}">
+                <h1 class="text-lg ml-8">${js[i].fname + " " + js[i].lname}</h1>
+                
+            </div>
+            <div class="infoo flex flex-col w-full mt-3 text-gray-300 rounded-2xl p-3 shadow-2xl " id="INFO">
+                <p>Apartment: ${js[i].apps_id}</p>
+                <p>Mobile number: ${js[i].phn}</p>
+                <p>Gender: ${js[i].gender}</p>
+                <p>Email: ${js[i].mail}</p>
+
+                <div class="mt-3 w-full flex flex-col" >
+                    <form class="flex flex-col" method="POST" action="/ratestar/${js[i].hown_id}/${js[i].phn}">
+                        {% csrf_token %}
+                        <div class="rate w-full h-4/7">
+                            <input type="radio" id="${js[i].phn}star100" name="rating" value="100" onchange="submitForm()" />
+                            <label for="${js[i].phn}star100" title="text">5 stars</label>
+                            <input type="radio" id="${js[i].phn}star80" name="rating" value="80" onchange="submitForm()" />
+                            <label for="${js[i].phn}star80" title="text">4 stars</label>
+                            <input type="radio" id="${js[i].phn}star60" name="rating" value="60" onchange="submitForm()"/>
+                            <label for="${js[i].phn}star60" title="text">3 stars</label>
+                            <input type="radio" id="${js[i].phn}star40" name="rating" value="40" onchange="submitForm()"/>
+                            <label for="${js[i].phn}star40" title="text">2 stars</label>
+                            <input type="radio" id="${js[i].phn}star20" name="rating" value="20" onchange="submitForm()" />
+                            <label for="${js[i].phn}star20" title="text">1 star</label>
+                        </div>
+                        <div class="w-fit bg-[#3f0742] hover:curso-pointer hover:bg-[#451347] rounded-2xl p-3 justify-end">
+
+                            <input type="submit" value="Submit"/>
+                        </div>
+                    </form>
+                </div>
+            </div>`;
+            
+            divv.addEventListener("click", () => {
+                divv.classList.toggle('expand');
+            });
+
+            show.appendChild(divv);
+
+            var _id = js[i].phn +"star"+js[i].rate ;
+            var ra = document.getElementById(_id) ;
+
+            ra.checked = true;
+        }
+       
+        
+        
+
+        
+
+
+    </script>
+
+    <style>
+        .rents {
+            cursor: pointer;
+        }
+
+
+        .infoo {
+            display: none;
+        }
+
+        .expand .infoo {
+            display: block;
+        }
+    </style>
+</body>
+
+</html>

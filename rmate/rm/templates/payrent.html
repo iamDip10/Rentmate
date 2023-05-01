@@ -242,7 +242,7 @@
                         <div
                             class="grid ml-4 mt-10 p-2 bg-[#27273d] border border-[#3d3d5c] rounded-xl h-30 w-1/4 shadow-xl ">
                             <h1 class="text-white text-xl font-extralight">Pending Payment </h1>
-                            <h1 class="text-white pt-2 text-2xl" id="amount"></h1>
+                            <h1 class="text-white pt-2 text-2xl" id="amount">Not Applicable</h1>
                         </div>
 
                         <!-- <div class="grid ml-4 mt-10 p-2 bg-[#27273d] border border-[#3d3d5c] rounded-xl h-30 w-1/4 shadow-xl ">
@@ -252,16 +252,16 @@
                         <div
                             class="grid ml-4 mt-10 p-2 bg-[#27273d] border border-[#3d3d5c] rounded-xl h-30 w-1/2 shadow-xl ">
                             <h1 class="text-white text-xl font-extralight">Deadline </h1>
-                            <h1 class="text-white pt-2 text-2xl" id="deadline"></h1>
+                            <h1 class="text-white pt-2 text-2xl" id="deadline">Not Applicable</h1>
                         </div>
 
                     </div>
-                    <div class="flex flex-wrap justify-start">
+                    <div class="flex flex-row justify-start">
                         <div
                             class="grid ml-4 mt-10 p-2 bg-[#27273d] border border-[#3d3d5c] rounded-xl h-30 w-1/2 shadow-xl ">
                             <h1 class="text-white text-xl font-extralight">Payment Status </h1>
 
-                            <h1 class="font-medium pt-2 text-2xl text-500 mt-2" id="month"></h1>
+                            <h1 class="font-medium pt-2 text-4xl text-500 text-white" id="month">Not Applicable</h1>
                         </div>
 
                         <div
@@ -280,7 +280,7 @@
                 </div>
 
                 <!-- Chart implement -->
-                <div class="grid ml-5 ">
+                <div class="flex flex-col ml-5 mt-16">
                     <h1 class="text-white text-xl ml-2 pt-20 font-extralight">Rent Up Down Level Yearly</h1>
                     <div class="flex flex-wrap w-full pt-10 ">
 
@@ -307,9 +307,9 @@
             </div>
 
             <!-- others -->
-            <div class="grid">
-                <div class=" mt-5 p-4 bg-[#2b2b41] rounded-xl drop-shadow-2xl w-fit h-fit grid justify-center" style="align-items: center;">
-                    <div class=" bg-[#2b2b41] grid justify-center">
+            <div class="flex flex-col">
+                <div class="mt-5 p-4 bg-[#2b2b41] rounded-xl drop-shadow-2xl w-fit h-full flex flex-col justify-center" >
+                    <div class=" bg-[#2b2b41] flex flex-col justify-center ">
                         <div class="colors">
                             <div class="one h-10 rounded-t-xl w-96 opacity-80"
                                 style="background: linear-gradient(to right, #cc208e, transparent,#cc208e);"></div>
@@ -327,20 +327,20 @@
 
 
                     </div>
-                    <div class="grid justify-center">
-                        <img src=" {{owner.image.url}}" alt="Mohammad Darain Khan"
-                            class="rounded-full relative -top-40 left-4" style="object-fit:cover; width: 165px; height: 165px;">
-                        <h1 class="text-white absolute mt-6 text-center" style="margin-left: 155px;">{{owner.fname|add:" "|add:owner.lname}}</h1>
-                        <h1 class="text-white relative text-sm text-center font-extralight" style="margin-top: -118px;">{{owner.mail}}</h1>
+                    <div class="flex flex-col -mt-36 items-center  ">
+                        <img src=" {% if owner.image.url != '' %} {{owner.image.url}} {% endif%}" alt="Mohammad Darain Khan"
+                            class="rounded-full relative" style="object-fit:cover; width: 165px; height: 165px;">
+                        <h1 class="relative mt-2 text-center text-white">{{owner.fname|add:" "|add:owner.lname}}</h1>
+                        <h1 class="text-white relative text-center text-sm font-extralight">{{owner.mail}}</h1>
 
-
+                        <h1 class="text-white text-sm mt-5 w-full">About {{owner.fname}},</h1>
+                        <p class="text-white font-extralight mt-3 w-full text-xs">{{owner.about_me}}</p>
                     </div>
-                    <h1 class="text-white relative text-sm" style="margin-top: -150px;">About {{owner.fname}},</h1>
-                    <p class="text-white font-extralight w-96 text-xs relative -top-14">{{owner.about_me}}</p>
+                    
 
                 </div>
                 <div
-                    class="relative top-9 mt-2 p-4 bg-[#2b2b41] rounded-xl drop-shadow-2xl w-fit h-fit grid justify-center" style="margin-top: -120px;">
+                    class=" mt-8 p-4 bg-[#2b2b41] rounded-xl drop-shadow-2xl w-fit h-fit grid justify-center">
 
                     <div class="grid justify-center text-center h-fit w-96">
 
@@ -364,21 +364,23 @@
                     </div>
 
                 </div>
-                <div class="relative top-20 p-4 bg-[#2b2b41] rounded-xl drop-shadow-2xl w-fit h-fit flex flex-col" style="margin-top: -130px;">
+                <div class="relative mt-8 p-4 bg-[#2b2b41] rounded-xl drop-shadow-2xl w-full h-1/3 flex flex-wrap" >
 
-                    <div class="grid justify-start h-fit w-96">
+                    <div class="flex flex-col h- w-full">
 
-                        <h1 class="text-white">Renter Rating</h1>
-                        <h1 class="text-white text-sm font-extralight"></h1>
-                        <div class="pt-2 pb-4">
-                            <h1 class="text-white text-5xl ">4.9/5</h1>
-                        </div>
-
-                        <div class="grid -top-10  w-80">
-                            <h1 class="text-white text- relative">Why this rating is important?</h1>
-                            <h1 class="text-white pt-4 text-sm relative  font-extralight">This rating is important
-                                because it indicates your responsibility as a renter. As a result while you are going to
-                                request for a new house rent to the house owner, they can see your rating.</h1>
+                        <h1 class="text-white">All Files</h1>
+                        
+                        <div class="flex flex-col w-full mt-3" id="files">
+                            {% for i in files %}
+                            <div class="mt-3">
+                                
+                                <h1 class="text-white"> PDF file of bills ({{i.month }})</h1>
+                                <div class="h-fit w-full flex mt-1">
+                                    <a class="text-white text-center no-underline bg-[#aa1ba4] rounded hover:bg-[#bd1e98] hover:cursor-pointer hover:text-blue-200 p-1 w-1/2" href="{{ i.files.url }}" download>Download</a>
+                                    <a class="text-white text-center ml-4 no-underline bg-[#8417bf] rounded hover:bg-[#7815c7] hover:text-white-200 p-1 w-1/2" href="{{ i.files.url }}">View</a>
+                                </div>
+                            </div>
+                            {%endfor%}
                         </div>
 
 
@@ -388,7 +390,7 @@
 
             </div>
         </div>
-        <div class="_form" id="form">
+        <div class="_form" id="form" >
             <div class="head">
                 <h1>Payment of January</h1>
 
@@ -463,6 +465,30 @@
         });
     </script>
     <script>
+        function monthInd(x) {
+            var month = [] ;
+
+            month[0] = "January" ;
+            month[1] = "February" ;
+            month[2] = "March" ;
+            month[3] = "April" ;
+            month[4] = "May" ;
+            month[5] = "June" ;
+            month[6] = "July" ;
+            month[7] = "August" ;
+            month[8] = "September" ;
+            month[9] = "October";
+            month[10] = "Novermebr" ;
+            month[11] = "December" ;
+
+            for (var i=0; i<13; i++) {
+                if (month[i] ==x ) {
+                    return i ;
+                }
+            }
+
+            return 0 ;
+        }
         var pop = document.getElementById("form");
         var ronly = document.getElementById("amnt");
         var bub = document.getElementById("sub");
@@ -474,7 +500,7 @@
         var spn = document.getElementById("spn") ;
 
         js_f = JSON.parse('{{pay|escapejs}}');
-
+    
         
         var box = document.getElementById('notii');
         var m = document.getElementById('main');
@@ -503,8 +529,8 @@
         atp.innerHTML = sum;
         selct.onchange = function () {
             for (var i = 0; i < js_f.length; i++) {
-                console.log(js_f[i].month + " " + this.value);
-                if (js_f[i].month == this.value) {
+                console.log(monthInd(js_f[i].month) + " " + monthInd(this.value));
+                if (monthInd(js_f[i].month) == monthInd(this.value)) {
                     st.innerHTML = js_f[i].status;
                     if (js_f[i].status == "NOT PAID") {
                         st.style.color = "red";
@@ -523,10 +549,17 @@
                     deadln.innerHTML = js_f[i].deadline;
                     break;
                 }
-                else {
+                else if (monthInd(js_f[i].month) < monthInd(this.value)) {
                     st.innerHTML = "UPCOMING";
                     amnt.innerHTML = "UPCOMING";
                     deadln.innerHTML = "UPCOMING";
+                    st.style.color = "white";
+                    bub.value = "Pay Rent";
+                    bub.style.pointerEvents = "none";
+                }else {
+                    st.innerHTML = "Not Applicable";
+                    amnt.innerHTML = "Not Applicable";
+                    deadln.innerHTML = "Not Applicable";
                     st.style.color = "white";
                     bub.value = "Pay Rent";
                     bub.style.pointerEvents = "none";
@@ -540,8 +573,12 @@
         const ctx = document.getElementById('payment');
         var arr = [];
 
+        
+
+
+
         for (var i = 0; i < js_f.length; i++) {
-            arr[i] = js_f[i].amount;
+            arr[monthInd(js_f[i].month)] = js_f[i].amount;
         }
         new Chart(ctx, {
             type: 'bar',
@@ -574,30 +611,6 @@
 
 
 
-
-
-    <script>
-        const ctx2 = document.getElementById('paymentbymonth');
-
-        new Chart(ctx2, {
-            type: 'line',
-            data: {
-                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-    </script>
 </body>
 
 </html>

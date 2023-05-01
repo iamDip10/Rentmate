@@ -1,0 +1,513 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+
+    <link rel="icon" type="image/x-icon" href="/IMAGES/fevicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Noto+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,800&display=swap" rel="stylesheet">
+    <title>Rentmate - Home</title>
+    <link rel="stylesheet" href="{% static 'CSS/starRate.css' %}">
+<style>
+    *{
+
+    scroll-behavior: smooth;
+
+
+}
+::-webkit-scrollbar{
+    display: none;
+
+}
+</style>
+
+
+  </head>
+<body>
+
+      
+
+    <div class="grid w-full">
+        
+
+
+      <div class="z-50 relative w-full h-full grid">
+            <nav class="w-5/6 bg-gray-900 flex justify-between bg-opacity-90 rounded-3xl p-1 pl-2 relative top-5 left-40">
+                <img src="IMAGES/white 1.png" alt="" class="w-24 ">
+
+                <div class="flex ml-3 mt-3 mr-8">
+                    <ul class="flex text-white">
+                    <li class="ml-2 "><a href="">Home</a></li>
+                    <li class="ml-8"><a href="aboutUs.html">About Us</a></li>
+                    <li class="ml-8"><a href="aboutUs.html">Login</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+
+
+
+
+            
+
+
+            
+
+
+                <div class="mt-20 ml-40 mb-32" >
+
+
+
+
+                    <div class=" border p-3  mb-20 rounded-xl border-gray-900 w-11/12  bg-white bg-opacity-10 " id="invisible">
+                        <h1 class="text-gray-900 mb-5 text-sm tracking tracking-wider">SEARCH YOUR FAMILY RESIDENCE OR MESS</h1>
+    
+                        <!-- FORM SECTION -->
+    
+                        <form action="" class="grid w-full " >
+    
+                            <div class="w-full flex">
+                              <div class="grid w-full ">
+                                <h1 class="text-xs text-gray-900   pb-2">House Type</h1>
+                                <select name="" id="" class="bg-gray-950 w-full border border-white  text-white p-1 rounded-lg hover:rounded-xl transition-all">
+                                  <option value="Family" class=" bg-gray-950 border border-gray-950  text-white p-1 rounded-lg hover:rounded-xl transition-all">Family</option>
+                                  <option value="Mess" class="bg-gray-950 border border-white  text-white p-1 rounded-lg hover:rounded-xl transition-all">Mess</option>
+                                </select>
+                
+                                
+                              </div>
+                
+                              <div class="grid w-full ml-5">
+                                <h1 class="text-xs text-gray-900 pb-2">Select District</h1>
+                                <select name="" id="" class=" bg-gray-950 border border-gray-900 text-white p-1 rounded-lg hover:rounded-xl transition-all">
+                                  <option value="Family" class="border border-white bg-transparent text-white p-1 rounded-lg hover:rounded-xl transition-all">Family</option>
+                                  <option value="Mess" class=" bg-gray-950 border border-white  text-white p-1 rounded-lg hover:rounded-xl transition-all">Mess</option>
+                                </select>
+                
+                                
+                              </div>
+                              <div class="grid w-full ml-5">
+                                <h1 class="text-xs text-gray-900 pb-2 ">Select Division</h1>
+                                <select name="" id="" class=" bg-gray-950 border border-white text-white p-1 rounded-lg hover:rounded-xl transition-all">
+                                  <option disabled selected> Division</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900 white  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Barishal">Barishal</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Chattogram">Chattogram</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Dhaka">Dhaka</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Khulna">Khulna</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Mymensingh">Mymensingh</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Rajshahi">Rajshahi</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Rangpur">Rangpur</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Sylhet">Sylhet</option>
+                                </select>
+                              </div>
+                              <div class="grid w-full ml-5">
+                                <h1 class="text-xs text-white pb-2">Select District</h1>
+                                <select name="" id="" class=" bg-gray-950 border border-whitw  text-white p-1 rounded-lg hover:rounded-xl transition-all">
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Bagerhat">Bagerhat</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Bandarban">Bandarban</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Barguna">Barguna</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Barisal">Barisal</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Bhola">Bhola</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Bogra">Bogra</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Brahmanbaria">Brahmanbaria</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Chandpur">Chandpur</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Chittagong">Chittagong</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Chuadanga">Chuadanga</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Comilla">Comilla</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Cox'sBazar">Cox'sBazar</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Dhaka">Dhaka</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Dinajpur">Dinajpur</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Faridpur">Faridpur</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Feni">Feni</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Gaibandha">Gaibandha</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Gazipur">Gazipur</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Gopalganj">Gopalganj</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Habiganj">Habiganj</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Jaipurhat">Jaipurhat</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Jamalpur">Jamalpur</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Jessore">Jessore</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Jhalokati">Jhalokati</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Jhenaidah">Jhenaidah</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Khagrachari">Khagrachari</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Khulna">Khulna</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Kishoreganj">Kishoreganj</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Kurigram">Kurigram</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Kushtia">Kushtia</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Lakshmipur">Lakshmipur</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Lalmonirhat">Lalmonirhat</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Madaripur">Madaripur</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Magura">Magura</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Manikganj">Manikganj</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Maulvibazar">Maulvibazar</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Meherpur">Meherpur</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Munshiganj">Munshiganj</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Mymensingh">Mymensingh</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Naogaon">Naogaon</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Narail">Narail</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Narayanganj">Narayanganj</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Narsingdi">Narsingdi</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Natore">Natore</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Nawabganj">Nawabganj</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Netrokona">Netrokona</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Nilphamari">Nilphamari</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Noakhali">Noakhali</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Pabna">Pabna</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Panchagarh">Panchagarh</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Patuakhali">Patuakhali</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Pirojpur">Pirojpur</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Rajbari">Rajbari</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Rajshahi">Rajshahi</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Rangamati">Rangamati</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Rangpur">Rangpur</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Satkhira">Satkhira</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Shariatpur">Shariatpur</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Sherpur">Sherpur</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Sirajganj">Sirajganj</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Sunamganj">Sunamganj</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Sylhet">Sylhet</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Tangail">Tangail</option>
+                                  <option class=" bg-gray-950 border border-fuchsia-900  text-white p-1 rounded-lg hover:rounded-xl transition-all" value="Thakurgaon">Thakurgaon</option>
+                                </select>
+                
+                
+                                
+                              </div>
+                            </div>
+              
+                            <button class="text-white border rounded-md hover:rounded-tl-3xl  hover:rounded-br-3xl hover:scale-90 p-2 hover:bg-gray-900 transition-all w-full  mt-5 border-fuchsia-900"><a href="searchPage.html">Search House</a> </button>
+              
+              
+                          </form>
+                
+                    </div>
+    
+    
+    
+    
+                    <h1 class="text-gray-900 mb-5 text-lg tracking cap tracking-wider" >Search Result As Per Your Input</h1>
+
+
+                    <!-- SEARCH RESULTS  -->
+                    <!-- BODDA LOOP EKHANEE JABE -->
+
+                    <div class="flex flex-col w-11/12" id="invisibleSec">
+
+                        
+
+                        {% for i in adver%}
+                        <div  class="flex flex-col w-full mt-5">
+
+                    
+                            <div class="flex justify-between border rounded-xl border-black">
+                                <div class="grid p-3 ">
+                                    <h1 class="text-3xl font-bold uppercase">Appertment in {{i.apart.id|slice:":2"}} FLoor</h1>
+                                    <h1 class="font-semibold text-lg ">Monthly Rent: {{i.apart.bill}} BDT</h1>
+                                    <div class="grid">
+
+                                        <div class="flex">
+                                            <h1 class="text-sm ">District: </h1>
+                                            <h1 class=" ml-2 text-sm ">{{i.apart.owner.div}}</h1>
+                                        </div>
+
+                                        <div class="flex">
+                                            <h1 class=" text-sm ">Area: </h1>
+                                            <h1 class=" ml-2 text-sm "> {{i.apart.owner.area}}</h1>
+                                        </div>
+                                        <div class="flex">
+                                            <h1 class="text-sm ">Owner Number: </h1>
+                                            <h1 class=" ml-2 text-sm " id="own"> {{i.apart.owner.number}}</h1>
+                                        </div>
+                                        <div class="flex">
+                                            <h1 class="text-sm ">Full Address: </h1>
+                                            <h1 class=" ml-2 text-sm "> {{i.apart.owner.p_addrs}}</h1>
+                                        </div>
+                                    </div>
+    
+                                    <div class="mt-10">
+                                        <h1 class="text-sm">Details</h1>
+                                        <div class="flex flex-col">
+                                            <div class="flex items-center">
+                                               <img class="mr-2" src="{% static 'IMG/bed.png'%}" alt="">
+                                               <h1 class=" mt-2">Bed- {{i.apart.bed}}</h1>
+                                                
+                                            </div>
+                                            <div class="flex items-center">
+                                                <img class="mr-2" src="{% static 'IMG/bath.png'%}" alt="">
+                                                <h1 class="mt-2">Bathroom- {{i.apart.bath}}</h1>
+                                                 
+                                            </div>
+                                            <div class="flex items-center">
+                                                <img class="mr-2" src="{% static 'IMG/sofa.png'%}" alt="">
+                                                <h1 class="mt-2">Living room- {{i.apart.living}}</h1>
+                                                 
+                                            </div>
+                                            <div class="flex items-center">
+                                                <img class="mr-2" src="{% static 'IMG/kit.png'%}" alt="">
+                                                <h1 class="mt-2">Kitchen- {{i.apart.kitchen}}</h1>
+                                                 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+    
+                                <div class="mt-10">
+                                    <h1 class="text-sm">House Owner Ratings</h1>
+                                    <div class="mt-3 w-full flex" >
+                                        
+                                            <div class="rate h-4/7">
+                                                <input type="radio" id="{{forloop.counter}}star100" name="rating" value="100" disabled  />
+                                                <label for="{{forloop.counter}}star100" title="text">5 stars</label>
+                                                <input type="radio" id="{{forloop.counter}}star80" name="rating" value="80" disabled  />
+                                                <label for="{{forloop.counter}}star80" title="text">4 stars</label>
+                                                <input type="radio" id="{{forloop.counter}}star60" name="rating" value="60" disabled />
+                                                <label for="{{forloop.counter}}star60" title="text">3 stars</label>
+                                                <input type="radio" id="{{forloop.counter}}star40" name="rating" value="40" disabled />
+                                                <label for="{{forloop.counter}}star40" title="text">2 stars</label>
+                                                <input type="radio" id="{{forloop.counter}}star20" name="rating" value="20" disabled />
+                                                <label for="{{forloop.counter}}star20" title="text">1 star</label>
+                                            </div>
+                                            
+                                       
+                                    </div>
+                                    
+                                    
+                                </div>
+    
+    
+                                <button class=" border rounded-md hover:rounded-tl-3xl  hover:rounded-br-3xl hover:scale-90 p-2 hover:bg-gray-900 transition-all w-96  mt-5 border-gray-900 hover:text-white" onclick="PopupForm()">Take Rent</button>
+                                
+                            </div>
+                            
+    
+    
+                            <div class="w-1/4 pt-3 pb-3 flex  justify-start pr-10  ">
+    
+                                <div class="w-full m-1">
+                                    <div class="w-full">
+                                        <img src="{{i.picss.url}}" class="borde border-gray-400 m-1 p-1 ml-4 rounded-lg" style="object-fit: cover;" alt="">
+                                    </div>
+                                    <!-- <div class="w-full">
+                                        
+                                    <img src="IMAGES/fomstock-4ojhpgKpS68-unsplash.jpg" class="border border-gray-400 m-1 p-1 ml-4 rounded-lg" alt="">
+                                    </div> -->
+                                </div>
+    
+                                <!-- <div class="w-full m-1">
+                                    <div class="w-full">
+                                        <img src="IMAGES/demoBuilding.jpg" class="border border-gray-400 m-1 p-1 ml-4 rounded-lg" alt="">
+                                    </div>
+                                    <div class="w-full">
+                                        
+                                    <img src="IMAGES/fomstock-4ojhpgKpS68-unsplash.jpg" class="border border-gray-400 m-1 p-1 ml-4 rounded-lg" alt="">
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        {%endfor%}
+    
+                        
+                        <div class="fixed top-64 grid left-1/4 w-1/2" style="display: none;" id="RequestForm"> 
+                            <div class="bg-white p-5 rounded-3xl border border-black">
+                                <div class="flex justify-end">
+        
+                                    <button title="close" onclick="closeForm()">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                          </svg>
+                                    </button>
+                                      
+                                </div>
+                                <div class="w-full " >
+                                    <div class="grid justify-center text-center">
+                                        <h1 class="text-4xl font-bold uppercase">One More Step!</h1>
+                                    <h1 class="text-base font-thin border-b-2 pb-1">To make rental request!</h1>
+                                    </div>
+        
+                                    <div class="flex justify-between w-full">
+                                        <form action="{% url 'wait' %}" method="POST" class="mt-8">
+                                            {% csrf_token %}
+                                            <div class="grid w-full mt-3">
+                                                <h1 class="text-sm text-gray-900 pb-2">Name</h1>
+                                                <input type="text" name="name" id="" class="bg-transparent w-full border border-gray-500  text-gray-700 p-1 rounded-lg hover:rounded-xl transition-all">
+                                            </div>
+            
+                                            <div class="grid w-full mt-3">
+                                                <h1 class="text-sm text-gray-900 pb-2">NID number</h1>
+                                                <input type="text" name="nid" id="" class="bg-transparent w-full border border-gray-500  text-gray-700 p-1 rounded-lg hover:rounded-xl transition-all">
+                                            </div>
+                                            
+                                            <div class="grid w-full mt-3">
+                                                <h1 class="text-sm text-gray-900 pb-2">Email</h1>
+                                                <input type="text" name="mail" id="" class="bg-transparent w-full border border-gray-500  text-gray-700 p-1 rounded-lg hover:rounded-xl transition-all">
+                                            </div>
+                                            <div class="flex justify-start w-full mt-3">
+                                                <input type="checkbox" name="cheked" id="" required>
+                                                <h1 class="ml-2"> I am agree with all rules</h1>
+                                            </div>
+                                            <input type="hidden" name="apid" id="" value="{{i.apart.id}}">
+                                            <input type="hidden" name="num" id="" value="{{i.apart.owner.number}}">
+        
+                                            <button class="border rounded-md hover:rounded-tl-3xl  hover:rounded-br-3xl hover:scale-90 p-2 hover:bg-gray-900 transition-all w-96  mt-5 border-gray-900 hover:text-white" type="submit">Submit Request</button>
+                                            
+                                        </form>
+        
+                                        <div class="w-1/2 border-l-2 p-2">
+                                            <div class="mt-10">
+                                                <h1 class="text-sm mb-5">Rules & Conditions</h1>
+                                                <ul class=" text-md">
+                                                    <li >- Have to clear Bills within 1st week of month.</li>
+                                                    <li>- Smoking is not allowed here. </li>
+                                                    <li>- Main gate will be closed within 11.45pm everyday.</li>
+                                                    <li>- Bills are included in monthly payment.</li>
+                                                    <li>- Garrage charge is not included.</li>
+                                                </ul>
+                                                </div>
+        
+                                        </div>
+                                    </div>
+        
+                                </div>
+        
+                            </div>
+                        </div>
+        
+                        
+                        
+
+                        
+    
+    
+    
+    
+    
+    
+                    </div>
+                        
+    
+                </div>
+    
+    
+    
+    
+                
+
+
+            </div>
+    
+                    
+                
+
+
+
+
+            
+        </div>
+
+    </div>
+
+
+    
+
+    <footer class="bg-[#131313] w-full h-fit mt-10 grid px-20 pt-20 pb-20 ">
+        <div class="flex justify-center scale-75">
+            <div class="flex border-r-2 pr-72 border-stone-500">
+                <img src="{% static 'IMG/white.png'%}" alt="" srcset="" class="w-60 h-44 absolute">
+            </div>
+            <div class="grid px-20 pr-72 border-stone-500 border-r-2">
+    
+                <h1 class="text-white text-2xl opacity-90">Contact With Us</h1>br
+                <h1 class="text-white text-lgmd opacity-90">Address:</h1>
+                <p class="text-white text-md opacity-70">United City, Madani Avenue, <br>
+                    Badda, Dhaka - 1212, Bangladesh.</p><br>
+    
+                    <h1 class="text-white text-xl opacity-90">Call:</h1>
+                <p class="text-white text-md opacity-70">+8801712950127, <br>
+                    +8801810046480</p><br>
+    
+                    <h1 class="text-white text-xl opacity-90">Email:</h1>
+                    <p class="text-white text-md opacity-70">mkhan203010@gmail.com <br>
+                        </p>
+    
+    
+            </div>
+
+            <div class="grid px-10 ">
+                <h1 class="text-white text-xl pl-5 opacity-90">Find Us on Social Platforms</h1>
+                <div class="flex ">
+                <a href="https://www.facebook.com/mdk.fahim/" class="pl-5"><img src="{% static 'IMG/icons8-facebook-50.png' %}" alt=""  ></a>
+                <a href="https://www.facebook.com/iamDip" class="pl-5"><img src="{% static 'IMG/icons8-facebook-50.png' %}" alt=""  ></a>
+                </div>
+            </div>
+
+        </div >
+        
+        <div class="grid justify-center relative top-12">
+            <img src="{% static 'IMG/team logo white.png' %}" alt="" srcset="" class="w-60">
+            <p class="text-white opacity-60">All Right Reserved Team Encrypted Cops</p>
+        </div>
+
+    </footer>
+
+
+
+
+
+    <script>
+
+        var jss = "{{js|escapejs}}";
+        var j = JSON.parse(jss) ;
+        var cntt = JSON.parse("{{j|escapejs}}")
+        console.log(j);
+        var cnt = 0, rate = 0 ;
+        for (var i=0; i<j.length; i++) {
+            if (j[i].owner_id == document.getElementById("own").innerText ) {
+                
+                cnt++ ;
+                rate += parseInt(j[i].rate) ;
+            }
+        }
+
+        for (var i=1; i<=cntt.length; i++){
+
+            var _id = i+"star"+(rate/cnt) ;
+            console.log(_id)
+            document.getElementById(_id).checked = true ;
+        }
+        function PopupForm(){
+            document.getElementById("RequestForm").style.display = "block";
+            document.getElementById("invisible").style.filter = "blur(8px)";
+
+           
+        }
+
+        function closeForm(){
+            
+            document.getElementById("RequestForm").style.display = "none";
+            document.getElementById("invisible").style.filter = "blur(0px)";
+
+        }
+
+        function submitBtn(){
+            document.getElementById("RequestForm").style.display = "none";
+            document.getElementById("invisible").style.filter = "blur(0px)";
+        }
+    </script>
+    
+</body>
+</html>

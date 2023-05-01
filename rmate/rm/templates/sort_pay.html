@@ -1,0 +1,45 @@
+<div class="w-full h-fit flex flex-row bg-gray-800 border border-fuchsia-900 p-3 rounded-lg mt-3">
+    <div class="ml-3 w-1/6 flex" style="align-items: center;">
+        <h1>Month</h1>
+    </div>
+    <div class="ml-3 w-1/6 flex" style="align-items: center;">
+        <h1>Apartment</h1>
+    </div>
+    <div class="ml-3 w-1/6 flex" style="align-items: center;">
+        <h1>Status</h1>
+    </div>
+    <div class="ml-3 w-1/6 flex" style="align-items: center;">
+        <h1>Payment date</h1>
+    </div>
+    <div class="ml-3 w-1/6 flex" style="align-items: center;">
+        <h1>Payment method</h1>
+    </div>
+</div>
+{% for p in pay%}
+<div class="w-full h-fit flex flex-row bg-gradient-to-r from-fuchsia-900 to-gray-900 border border-fuchsia-900 p-3 rounded-lg mt-3">
+    <div class="ml-3 w-1/6 flex  " style="align-items: center;">
+        <h1>{{p.month}}</h1>
+    </div>
+    <div class="ml-3 w-1/6 flex  " style="align-items: center;">
+        <h1>{{p.apps.id}}</h1>
+    </div>
+    <div class="ml-3 w-1/6 flex " style="align-items: center;">
+        <h1>{{p.status}}</h1>
+    </div>
+    <div class="ml-3 w-1/6 flex " style="align-items: center;">
+        {% if p.status == "PAID" %}
+        <h1>{{p.date}}</h1>
+        {% else %}
+        <h1>The payment is due</h1>
+        {% endif %}
+    </div>
+    <div class="ml-3 w-1/6 flex " style="align-items: center;">
+        {% if p.status == "PAID" and p.paymentID != none %}
+            <h1>Online payment({{p.paymentID}})</h1>
+        {% elif p.status == "PAID" and p.paymentID == none  %}
+            <h1>Offline payment</h1>
+        {% endif %}
+    </div>
+    
+</div>
+{%endfor%}

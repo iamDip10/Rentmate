@@ -1,0 +1,26 @@
+<h1 class="text-white  pl-2 pt-2 tracking-wider text-sm w-fit" >All Complaints List</h1>
+{% for comp in complain %}
+<div
+    class="w-full h-fit flex flex-row bg-gradient-to-r from-fuchsia-900 to-gray-900 border border-fuchsia-900 p-3 rounded-lg mt-3">
+    <div class="ml-3 w-1/5 flex" style="align-items: center;">
+        <h1>{{comp.app.id}}</h1>
+    </div>
+    <div class="ml-3 w-1/5 flex" style="align-items: center;">
+        <h1>{{comp.user.fname|add:" "|add:comp.user.lname}}</h1>
+    </div>
+    <div class="ml-3 w-1/5 flex" style="align-items: center;">
+        <h1>{{comp.date}}</h1>
+    </div>
+    <div class="ml-3 w-1/5 flex" id="slv" style="align-items: center;">
+        <h1>{{comp.slv_status}}</h1>
+    </div>
+    <div class="ml-3 w-1/6 flex" style="align-items: center;">
+                                
+        <a href="{% url 'bcomp_solv' number=num pk=comp.pk %}" id="link" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800">Solved</a>
+
+    </div>
+    <div class="ml-3 w-1/5 flex" style="align-items: center;">
+        <h1>{{comp.prob_desc}}</h1>
+    </div>
+</div>
+{% endfor %}
