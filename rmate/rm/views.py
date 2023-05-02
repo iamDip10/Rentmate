@@ -805,7 +805,13 @@ def messleader(req):
 def adminm(req):
     return render(req, 'adminmain.html')
 def adminp(req):
-    return render(req, 'adminpayment.html')
+    rep = report.objects.all()
+    data = {
+        'cnt': rep.count(),
+        'obj': rep,
+    }
+    
+    return render(req, 'adminpayment.html', data)
 def admins(req):
     return render(req, 'adminsettings.html')
 

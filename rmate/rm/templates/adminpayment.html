@@ -121,7 +121,7 @@
                 <div class="grid mt-44" >
                     <ul>
                         <li class="text-sm mt-10  transition-all"><a href="{% url 'adminm' %}" id="dBoard"> Dashboard</a></li>
-                        <li class="text-sm mt-10 opacity-60 hover:opacity-100 transition-all"><a href="{% url 'adminp' %}" id="dBoard"> Payments & Bills</a></li>
+                        <li class="text-sm mt-10 opacity-60 hover:opacity-100 transition-all"><a href="{% url 'adminp' %}" id="dBoard">Report & Issues</a></li>
                         
                         <li class="text-sm mt-10 opacity-60 hover:opacity-100 transition-all"><a href="{% url 'admins' %}" id="dBoard"> Settings and Privacy</a></li>
                     </ul>
@@ -152,7 +152,7 @@
     
                     <div class="grid">
                         <h1  class="text-8xl tracking-wider font-extrabold" style=" text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;">TEAM ENCRYPTED COPS</h1>
-                        <h1 class="text-sm tracking tracking-widest">ACCOUNTS SECTION</h1>
+                        <h1 class="text-sm tracking tracking-widest">REPORT SECTION</h1>
                     </div>
                 </div>
             </div>
@@ -160,22 +160,8 @@
             <div class="flex w-full mt-20 mb-10">
                 <div class=" border w-full border-orange-900 p-3 rounded-2xl flex h-fit mt-5  mr-5" style=" text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;">
                     <div class="border-r pr-5 w-full border-orange-500">
-                        <h1 class="text-xs">Yearly Revenue</h1>
-                        <h1 class="text-xl">90000000 BDT</h1>
-                    </div>
-
-                    <div class="ml-5 border-r pr-5 w-full border-orange-500">
-                        <h1 class="text-xs">Monthly Revenue</h1>
-                        <h1 class="text-xl">4000000 BDT</h1>
-                    </div>
-
-                    <div class="ml-5 border-r pr-5 w-full border-orange-500">
-                        <h1 class="text-xs">Weekly Revenue</h1>
-                        <h1 class="text-xl">2,00,000 BDT</h1>
-                    </div>
-                    <div class="ml-5 border-r pr-5 w-full border-orange-500">
-                        <h1 class="text-xs">Daily Revenue</h1>
-                        <h1 class="text-xl">100000 BDT</h1>
+                        <h1 class="text-xs">Total report</h1>
+                        <h1 class="text-xl">{{cnt}}</h1>
                     </div>
 
                     <div class="ml-5  pr-5 w-full">
@@ -191,60 +177,35 @@
 
 
 
-            <div class="h-96 overflow-scroll backdrop-blur-xl shadow-2xl">
+            <div class="h-96 overflow-scroll mr-6 backdrop-blur-xl shadow-2xl">
 
-                <table class="text-white text-sm w-full mt-7 " >
+                <table class="text-white text-sm w-full mt-7 mr-8 " >
                     <thead class="" style=" text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;">
     
-                        <th class="pr-5  p-5  pl-3 bg-transparent border border-orange-800 rounded-md"><h1 class="text-white">Payment Ammount</h1></th>
-                        <th class="pr-5 p-5  pl-3  border border-orange-800 rounded-md"><h1 class="text-white">Transaction ID</h1></th>
-                        <th class="pr-5 p-5  pl-3 border border-orange-800 rounded-md"><h1 class="text-white">Payment Method</h1></th>
-                        <th class="pr-5 p-5  pl-3 border border-orange-800 rounded-md"><h1 class="text-white">Date And Time</h1></th>
+                        <th class="pr-5  p-5  pl-3 bg-transparent border border-orange-800 rounded-md"><h1 class="text-white">Index</h1></th>
+                        <th class="pr-5 p-5  pl-3  border border-orange-800 rounded-md"><h1 class="text-white">Issues</h1></th>
+                        <th class="pr-5 p-5  pl-3 border border-orange-800 rounded-md"><h1 class="text-white">Done by</h1></th>
+                        <th class="pr-5 p-5  pl-3 border border-orange-800 rounded-md"><h1 class="text-white">Done for</h1></th>
 
 
     
                     </thead>
+                    {% for i in obj %}
                     <tbody class="font-extralight" style=" text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;">
-                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">5000</td>
+                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">{{forloop.counter}}</td>
 
-                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">5hvj87346fih</td>
+                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">{{i.prob}}</td>
                         
-                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">Bank</td>
+                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">{{i.user.fname|add:" "|add:i.user.lname}}</td>
 
-                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">12-12-12</td>
+                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">{{i.owner.fname|add:" "|add:i.owner.lname}}</td>
                         
     
                        
                     </tbody>
     
-
-                    <tbody class="font-extralight" style=" text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;">
-                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">5000</td>
-
-                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">5hvj87346fih</td>
-                        
-                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">Bank</td>
-
-                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">12-12-12</td>
-                        
-    
-                       
-                    </tbody>
-
-
-
-                    <tbody class="font-extralight" style=" text-shadow: 0px 0px 2px #ffa200, 0px 0px 5px #ffa200, 0px 0px 5px #ff4000, 0px 0px 100px #ffffff;">
-                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">5000</td>
-
-                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">5hvj87346fih</td>
-                        
-                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">Bank</td>
-
-                        <td class="pr-5 h-24 pl-3 border border-orange-800 rounded-md text-center">12-12-12</td>
-                        
-    
-                       
-                    </tbody>
+                    {%endfor%}
+                   
     
                     
 
