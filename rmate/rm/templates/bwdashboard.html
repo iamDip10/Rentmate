@@ -184,7 +184,7 @@
                     </div>
 
                     <div class="ml-5">
-                        <img src="{{ mom.picc.url}} " class=" w-10 h-10  rounded-full border" alt="">
+                        <img src="{% if mom.picc.url %}{{ mom.picc.url}}{% endif %} " class=" w-10 h-10  rounded-full border" alt="">
                     </div>
                 </div>
             </nav>
@@ -304,7 +304,7 @@
 
                     </div>
 
-                    <div class="flex justify-between  w-full h-fit overflow-scroll mt-5 mr-5">
+                    <div class="flex justify-between  w-full h-fit overflow-hidden mt-5 mr-5">
 
                         <div
                             class="bg-gradient-to-r from-fuchsia-900  to-gray-900 border border-fuchsia-900 h-fit w-full p-3 rounded-lg  flex justify-between ml-10 mr-5 ">

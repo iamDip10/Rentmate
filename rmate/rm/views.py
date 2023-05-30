@@ -161,6 +161,7 @@ def register(req):
            
     return render(req, "register.html") 
 
+
         
 
 def savedata(req, phn):
@@ -734,10 +735,10 @@ def advertisments(req, number):
         if 'picss_' in req.FILES:
             pik = req.FILES['picss_']
         print(app+"-"+own.number)
-        objeet = advertisment(apart = apartment.objects.get(id = app), picss = pik, owner = own )
         apss = apartment.objects.get(id = app)
         apss.adver = "YES"
         apss.save()
+        objeet = advertisment(apart = apartment.objects.get(id = app), picss = pik, owner = own, bill=apss.bill, area = own.area, number = own.number, address = own.p_addrs, bed = apss.bed, kitchen = apss.kitchen, bathroom = apss.bath, lroom = apss.living )
         objeet.save()  
           
 
@@ -753,7 +754,7 @@ def sendnotice(req, to, num):
     return redirect('houseup', number = num)
 
 def search(req):
-    adver = advertisment.objects.all()
+    adver = advertisment.objects.filter(apart__occupy = "NO" )
     print(adver)
     jsonn = json.dumps(list(rating.objects.all().values()))
     jso = json.dumps(list(adver.values()))
@@ -794,6 +795,9 @@ def decline(req, to, num):
     subject = "Decline of the agreement"
     obj = sendmail(subject, messg, con_set.EMAIL_HOST_USER, too)
     obj._send() 
+
+    userr = waitforapproval.objects.filter(email = to)
+    userr.delete()
     
     return redirect('houseup', number=num)
 

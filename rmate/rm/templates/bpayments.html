@@ -201,23 +201,23 @@
 
                     <div
                         class="bg-gradient-to-r from-[#731f78]  to-gray-800 shadow-2xl border w-full border-fuchsia-900  rounded-2xl">
-                        <h1 class="relative top-4 text-sm left-9">Overview</h1>
-                        <div class=" border border-fuchsia-900 p-3 rounded-2xl flex h-fit mt-5 ml-5 mr-5">
-                            <div class="border-r pr-5 border-fuchsia-500">
+                        <h1 class="relative top-4 text-sm ml-9">Overview</h1>
+                        <div class=" border border-fuchsia-900 p-3 rounded-2xl flex h-fit mt-5 ml-6 mr-5">
+                            <div class="border-r w-1/5 pr-5 border-fuchsia-500">
                                 <h1 class="text-xs">Total Revenue</h1>
                                 <h1 class="text-xl">{{total_rev.sum}} BDT</h1>
                             </div>
 
-                            <div class="ml-5 border-r pr-5 border-fuchsia-500">
+                            <div class="ml-5 w-1/5 border-r pr-5 border-fuchsia-500">
                                 <h1 class="text-xs">This Month Revenue</h1>
                                 <h1 class="text-xl">{{month_rev.sum}} BDT</h1>
                             </div>
 
-                            <div class="ml-5 border-r pr-5 border-fuchsia-500">
+                            <div class="ml-5 w-1/5 border-r pr-5 border-fuchsia-500">
                                 <h1 class="text-xs">Payment Due</h1>
                                 <h1 class="text-xl">{{ due_pay.count}}</h1>
                             </div>
-                            <div class="ml-5 border-r pr-5 border-fuchsia-500">
+                            <div class="ml-5 w-1/5 border-r pr-5 border-fuchsia-500">
                                 <h1 class="text-xs">Due Appartment</h1>
                                 <h1 class="text-xl">
                                     {% for due in due_pay %}
@@ -226,7 +226,7 @@
                                 </h1>
                             </div>
 
-                            <div class="ml-5">
+                            <div class="ml-5 w-1/5">
                                 <h1 class="text-xs">Due Month</h1>
                                 <h1 class="text-xl">{{month}}</h1>
                             </div>

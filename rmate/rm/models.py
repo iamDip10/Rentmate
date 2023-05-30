@@ -64,7 +64,14 @@ class advertisment(models.Model):
     apart = models.ForeignKey(apartment, on_delete=models.CASCADE, null=True, blank=True)
     picss = models.ImageField(upload_to="advers/", null=True)
     owner = models.ForeignKey(Pro_owner, on_delete=models.CASCADE, null=True, blank=True)
-    
+    bill = models.CharField(max_length=10, null=True, blank=True)
+    area = models.CharField(max_length=100, null=True)
+    number = models.CharField(max_length=100, null=True)
+    address = models.CharField(max_length=100, null=True)
+    bed = models.CharField(max_length=100,null=True)
+    kitchen = models.CharField(max_length=100,null=True)
+    bathroom = models.CharField(max_length=100,null=True)
+    lroom = models.CharField(max_length=100,null=True)
     class Meta:
         db_table = "advertisment"
         
